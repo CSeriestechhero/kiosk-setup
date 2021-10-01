@@ -1,0 +1,118 @@
+{
+  "url": {
+    "Value": [
+      "https://cseriestechhero.github.io/LCTsearch",
+      "https://chat.google.com/u/1",
+      "https://physapplied.com/?w",
+      "https://physapplied.com/?w"
+    ]
+  },
+  "tokenserver": {
+    "Value": ""
+  },
+  "customtoken": {
+    "Value": ""
+  },
+  "multipleurlmode": {
+    "Value": "tabs"
+  },
+  "newwindowmode": {
+    "Value": "tab"
+  },
+  "startupdelay": {
+    "Value": 0
+  },
+  "rotaterate": {
+    "Value": false
+  },
+  "displaysysteminfo": {
+    "Value": "admin"
+  },
+  "allowprint": {
+    "Value": true
+  },
+  "hidegslidescontrols": {
+    "Value": false
+  },
+  "local": {
+    "Value": true
+  },
+  "scheduledreset": {
+    "Value": false
+  },
+  "reset": {
+    "Value": false
+  },
+  "clearcookiesreset": {
+    "Value": false
+  },
+  "screensaverreloadinterval": {
+    "Value": null
+  },
+  "hidecursor": {
+    "Value": false
+  },
+  "disablecontextmenu": {
+    "Value": false
+  },
+  "disabledrag": {
+    "Value": false
+  },
+  "disabletouchhighlight": {
+    "Value": false
+  },
+  "disableselection": {
+    "Value": false
+  },
+  "newwindow": {
+    "Value": true
+  },
+  "allowdownload": {
+    "Value": true
+  },
+  "disallowupload": {
+    "Value": false
+  },
+  "disallowiframes": {
+    "Value": false
+  },
+  "useragent": {
+    "Value": ""
+  },
+  "authorization": {
+    "Value": ""
+  },
+  "username": {
+    "Value": "lctapps"
+  },
+  "password": {
+    "Value": "bagel"
+  },
+  "remoteschedule": {
+    "Value": false
+  },
+  "remotescheduleurl": {
+    "Value": ""
+  },
+  "schedulepollinterval": {
+    "Value": false
+  },
+  "sleepmode": {
+    "Value": "display"
+  },
+  "resetcache": {
+    "Value": false
+  },
+  "shownav": {
+    "Value": true
+  },
+  "showbattery": {
+    "Value": true
+  },
+  "screensaverwarningtime": {
+    "Value": 0
+  },
+  "screensaverwarningmessage": {
+    "Value": "Screensaver starting in {countdown} seconds..."
+  }
+}
