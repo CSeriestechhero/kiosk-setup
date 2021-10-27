@@ -1,11 +1,11 @@
 {
   "url": {
     "Value": [
-      "https://cseriestechhero.github.io/LCTsearch",
-      "https://groups.google.com/u/1/a/nv.ccsd.net/g/lctapps-web-rebellion-user",
-      "https://app.element.io",
-      "https://physapplied.com/?w",
-      "https://physapplied.com/?w"
+      "https://cseriestechhero.github.io/kiosk-setup/services/redir/webviewupdate1.html",
+      "https://cseriestechhero.github.io/kiosk-setup/services/redir/webviewupdate2.html",
+      "https://cseriestechhero.github.io/kiosk-setup/services/redir/webviewupdate3.html",
+      "https://cseriestechhero.github.io/kiosk-setup/services/redir/webviewupdate4.html",
+      "https://cseriestechhero.github.io/kiosk-setup/services/redir/webviewupdate5.html"
     ]
   },
   "tokenserver": {
