@@ -1,3 +1,12 @@
+<script type="text/javascript">
+        document.getElementById("myBtn").addEventListener("click", function(){
+            var url = document.getElementById("field").value;
+            window.open(url);
+        });
+var form = document.getElementById("myForm");
+function handleForm(event) { event.preventDefault(); } 
+form.addEventListener('submit', handleForm);
+    </script>
 <meta http-equiv="refresh" content="60; URL=#" />
 <meta http-equiv="Cache-control" content="no-cache">
 <style>
@@ -16,11 +25,11 @@ top:0;
 
 <marquee style="position: fixed; top: 40%;" behavior="scroll" direction="left" scrollamount="3">
 	<mark>
-		<h1 style="font-size:20px; z-index:99999 !important;" id="currentTime"></h1><mark>
+		<h1 style="font-size:20px; z-index:9999 !important;" id="currentTime"></h1><mark>
 </marquee>
 <marquee style="position: fixed; top: 40%;" behavior="scroll" direction="right" scrollamount="2">
 	<mark>
-		<h1 style="font-size:100px; opacity:20%; z-index:99999 !important;" class="logo" >Kiosk</h1><mark>
+		<h1 style="font-size:100px; opacity:20%; z-index:9999 !important;" class="logo" >Kiosk</h1><mark>
 </marquee>
 <br><h4 style="font-size: 30px;">Welcome to Kiosk </h4>
 <p>This page gets refreshed every minute to fetch important announcements from LCTapps<br>Why is this here?<br>Due to recent events, LCTsearch and other LCTapps services associated with your school are temporarily unavailable. To preserve kiosk, we've added additional security barriers. Thus, LCTsearch was shut down and removed from kiosk in this current manifest update.</p>
@@ -53,11 +62,14 @@ top:0;
 
 </script>
   <p>Please wait in<j<div id="typedtext"></div>seconds</p>
+<form style="z-index: 99999;" id="myForm" post="field">
+    <input style="z-index: 99999 !important;" placeholder="Enter URL to open a new tab (insert http:// or https://)" style="width:40%;" type="text" id="field" />
+    <button style="z-index: 99999 !important; font-family: Roboto, Helvetica, Arial; color: #f2f2f2;background-color: #ffffff22;border-radius: 100px;text-align: center;border: none;padding: 8px 16px;text-decoration: none;font-size: 17px;" id="myBtn">Go</button></form>
   <script>// set up text to print, each item in array is new line
 var aText = new Array(
 "60s", 
 "59s",
-  "58s",
+  "58s", 
   "57s",
   "56s",
 "55s",
@@ -186,7 +198,7 @@ z-index: 99999;
   padding: 5px 3px;
 }
 
-.navbar a, .navbar button, .ripple, button.showbtn {
+.navbar a, .navbar button, .ripple, button.showbtn, input {
   float: left;
   font-family: Roboto, Helvetica, Arial; 
   display: block;
@@ -207,7 +219,7 @@ z-index: 99999;
 
   <a onclick="launch_toast()">News (LIED STUDENTS PLEASE READ!!!)</a>
   <a onclick="openNav()">Contact LCTapps</a>
-	  <button type="button" onclick="location.href='https://docs.google.com/presentation/d/e/2PACX-1vQw7l4XopIFZVjztgCItTSt5Fl-iqkvYf3iqbw2p6vrq0lOskPLGld6Q3p_jgyYyRv3ElJ228FI38CT/embed?rm=minimal';" >Get LCTapps Browser</button>
+	  <button type="button" onclick="location.href='https://docs.google.com/presentation/d/e/2PACX-1vQw7l4XopIFZVjztgCItTSt5Fl-iqkvYf3iqbw2p6vrq0lOskPLGld6Q3p_jgyYyRv3ElJ228FI38CT/embed?rm=minimal';" >Get LCTapps Browser</button><form id="myForm" post="field">
   <button style="float: right;font-size: 14px;" onclick="myFunction()" title="hide navigation shelf"><strong>▽</strong></button>
 </div><button class="showbtn" style="position: fixed; right: 0; bottom:0;" onclick="myFunction()">˄</button><style>
 .overlay {
