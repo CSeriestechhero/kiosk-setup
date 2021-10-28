@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="canonical" href="https://html5-templates.com/" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="context.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+	<script src="context.js"></script>
+<script src="microne.js"></script>
+  <script>
+     function saveTextAsFile()
+        {
+            var textToWrite = tinyMCE.activeEditor.getContent();
+            var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+            var fileNameToSaveAs = "note.html";
+
+            var downloadLink = document.createElement("a");
+            downloadLink.download = fileNameToSaveAs;
+            downloadLink.innerHTML = "Download File";
+
+            downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+            downloadLink.click();
+        };
+ </script>
+	<title>Funky OS</title>
+</head>
+<body>
+	<div id="desktop">
+	<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+	<div class="position">
+    <div class="container" align="center">
+        <table style="text-align: left; width: 99%; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+            <tbody>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;"><a class="openWindow" data-id="0">LCTapps Search app</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;"><a class="openWindow" data-id="1">llaneshost</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;"><a class="openWindow" data-id="2">Browser</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;"><a class="openWindow" data-id="3">os options</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;"><a class="openWindow" data-id="4">Welcome screen</a><br>
+                    </td>
+                </tr>
+			       <tr>
+                    <td style="vertical-align: middle; text-align: center;"><a class="openWindow" data-id="5">File Explorer</a><br>
+                    </td>
+                </tr>
+			       <tr>
+                    <td style="vertical-align: middle; text-align: center;"><a class="openWindow" data-id="6">song test</a><br>
+                    </td>
+                </tr>
+			       <tr>
+                    <td style="vertical-align: middle; text-align: center;"><a class="openWindow" data-id="7">Notepad</a><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+		<div class="window closed app" data-title="Web Search">
+			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/apps/websearch.html"></iframe>
+		</div>
+		<div class="window closed app" data-title="llaneshost">
+			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/redidmaze/software/nav.html"></iframe>
+		</div>
+		<div style="padding:none !important;" class="window closed app" data-title="Browser">
+			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/apps/browserlite.html"></iframe>
+		</div>
+		<div id="bgchanger" class="window closed" data-title="Options">
+			<h1 class="settingui" >Options</h1><br>
+
+			<script type="text/javascript">
+    var defaultImage = "http://...";
+    document.getElementsByTagName('div')[0].style.backgroundImage = localStorage.getItem('back') ? "url('"+localStorage.getItem('back')+"')" : "url('"+defaultImage+"')";
+  function changebackground(){
+      var url =  document.getElementById('bgchanger').value;
+      document.getElementsByTagName('div')[0].style.backgroundImage = "url('" + url + "')";
+      localStorage.setItem('back',url);
+    }
+</script><input class="settingui" style="width: 70%;" type="text" id="bgchanger" placeholder="Change Background Add URL" />
+<input class="settingui" type="button" onclick="changebackground();" value="Change!" /><br><span style="text-align: center;">---</span>
+		<div><button onclick="myFunction()">Toggle dark mode</button></div>
+		</div>
+		<div class="window" data-title="Welcome">
+			<div style="padding: 10px;"><h1>Funky OS Welcome</h1>
+			<p>Welcome to funky os! This is a bad LuCI desktop interface. The idea was thought up by Lettuce and CornJuice.</p>
+			<p>Drag the title bar to move the windows or resize them from the bottom right corner.</p>
+			<hr />
+			<p><strong>This LuCI is based off of HTML5-Template's Desktop Template. You can check it out at <a href="https://html5-templates.com/" rel="nofollow" target="_blank">HTML5-Templates.com</a>	</strong></p></div>
+
+		</div><div style="padding:none !important;" class="window closed app" data-title="File Explorer"><p style="position: absolute; top: 0;" >Files can be uploaded, viewed, but not modified or deleted!</p>
+			<iframe style="position: absolute; right: 0; left: 0; bottom: 0; top: 0; height: 100%; width: 100%; margin: 0px; border: none;" src="files"></iframe>
+		</div>
+		<div class="window closed app" id="player" data-title="song test">
+		<div id="player">	  	<script>
+	    	var m = new Microne(document.getElementById('player'))
+m.source('files/uploads/hypp3rr x ace of spadez - 13013013 𓆉 {p. sujo} ༼ つ ◕◡◕ ༽つ.mp3')
+	  	</script></div></div>
+				<div style="padding:none !important;" class="window closed app" data-title="Notepad">
+				<script>var d = document;
+
+// not using this at the moment but might do later for graceful degradation...
+function supports_html5_storage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch (e) {
+    return false;
+  }
+}
+
+d.addEventListener('DOMContentLoaded', function(){
+
+  var savedContent = localStorage.getItem("notepadcontent");
+  if(savedContent != null){
+    d.getElementById("textArea").value = savedContent;
+  }
+
+
+ d.getElementById("textArea").onkeyup = function(){
+  var data = d.getElementById("textArea").value;  localStorage.setItem("notepadcontent", data);
+  }
+});
+</script><script src="notepadDev.js"></script>
+<div class="notemenu">
+<a href="javascript:localStorageToFile()">Save</a></div>
+<textarea style="resize:none;" id="textArea" placeholder="Start typing ..."></textarea>
+		</div>
+
+		<div id="taskbar">
+		</div>
+
+		<div id="icons">
+			<a class="openWindow" data-id="0">LCTapps Search app</a><br>
+			<a class="openWindow" data-id="1">llaneshost</a><br>
+			<a class="openWindow" data-id="2">Browser</a><br>
+			<a class="openWindow" data-id="3">os options</a><br>
+			<a class="openWindow" data-id="4">Welcome screen</a><br>
+			<a class="openWindow" data-id="5">File Explorer</a><br>
+			<a class="openWindow" data-id="6">song test</a><br>
+			<a class="openWindow" data-id="7">Notepad</a><br>
+		</div>
+
+		<a href="" rel="nofollow" target="_blank" id="templateLink">&copy; </a>
+		<!-- You can use this template freely if you leave a visible link to HTML5-Templates.com -->
+	</div>
+</body>
+
+</html>
