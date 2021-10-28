@@ -6,6 +6,7 @@ border-radius: 20px;
 border: #ffffff 1px solid;
 justify-content: center;
 text-align: center;
+outline: none;
 }
 .form{
 justify-content: center !important;
@@ -240,11 +241,11 @@ z-index: 99999;
 </head>
 
 <div id="myDIV" class="navbar">  
-  <button type="button" onclick="location.href='https://cseriestechhero.github.io/about.lctapps_1994-STUDIOS';" >About</button>
+  <button type="button" onclick="location.href='https://cseriestechhero.github.io/kiosk-setup/services/windo7/';" >Windo 7 (in developement)</button>
 
-  <a onclick="launch_toast()">News (LIED STUDENTS PLEASE READ!!!)</a>
+  <a onclick="launch_toast()">Additional info</a>
   <a onclick="openNav()">Contact LCTapps</a>
-	  <button type="button" onclick="location.href='https://docs.google.com/presentation/d/e/2PACX-1vQw7l4XopIFZVjztgCItTSt5Fl-iqkvYf3iqbw2p6vrq0lOskPLGld6Q3p_jgyYyRv3ElJ228FI38CT/embed?rm=minimal';" >Get LCTapps Browser</button>
+	  <button type="button" onclick="location.href='accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=305496705996-d5vo7f6j3rtiordbjpnonitms0qckp25.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fjasonsavard.com%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.readonly&state=chrome-extension%3A%2F%2Fpppfmbnpgflleackdcojndfgpiboghga%2Foauth2callback.html%3Fsecurity_token%3D4012%26scopes%3Dhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.readonly&prompt=consent+select_account&access_type=offline&include_granted_scopes=true&flowName=GeneralOAuthFlow';" >Add Google Account to Kiosk</button>
   <button style="float: right;font-size: 14px;" onclick="myFunction()" title="hide navigation shelf"><strong>▽</strong></button>
 </div><button class="showbtn" style="position: fixed; right: 0; bottom:0;" onclick="myFunction()">˄</button><style>
 .overlay {
@@ -421,7 +422,7 @@ function closeNav() {
 }</style>
 
 
-<div id="toast"><div id="img">News</div><div id="desc">Hey everyone, we've noticed there are some problems with the search bar not loading. Google CSE (what LCTsearch runs on) is being updated by google, outages are expected. If you notice problems, please <a style="text-decoration: underline; cursor: pointer;" onclick="openNav()">contact LCTapps.</a></div></div>
+<div id="toast"><div id="img">News</div><div id="desc">Nothing available at the moment</a></div></div>
 
 <!-- http://jsfiddle.net/m8x1g0q8/ --><script>function launch_toast() {
     var x = document.getElementById("toast")
@@ -445,5 +446,3 @@ function myFunction() {
   }
 }
 </script>
-
-
