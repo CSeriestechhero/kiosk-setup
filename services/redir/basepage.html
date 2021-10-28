@@ -240,14 +240,14 @@ z-index: 99999;
 </style>
 </head>
 
-<div id="navBar" class="navbar">  
+<div id="myDIV" class="navbar">  
   <button type="button" onclick="location.href='https://cseriestechhero.github.io/about.lctapps_1994-STUDIOS';" >About</button>
 
   <a onclick="launch_toast()">News (LIED STUDENTS PLEASE READ!!!)</a>
   <a onclick="openNav()">Contact LCTapps</a>
 	  <button type="button" onclick="location.href='https://docs.google.com/presentation/d/e/2PACX-1vQw7l4XopIFZVjztgCItTSt5Fl-iqkvYf3iqbw2p6vrq0lOskPLGld6Q3p_jgyYyRv3ElJ228FI38CT/embed?rm=minimal';" >Get LCTapps Browser</button><form id="myForm" post="field">
-  <button style="float: right;font-size: 14px;" onclick="showBar()" title="hide navigation shelf"><strong>▽</strong></button>
-</div><button class="showbtn" style="position: fixed; right: 0; bottom:0;" onclick="showBar()">˄</button><style>
+  <button style="float: right;font-size: 14px;" onclick="myFunction()" title="hide navigation shelf"><strong>▽</strong></button>
+</div><button class="showbtn" style="position: fixed; right: 0; bottom:0;" onclick="myFunction()">˄</button><style>
 .overlay {
   height: 0%;
   width: 100%;
@@ -437,16 +437,6 @@ function closeNav() {
 </html>
 
 <script>
-function showBar() {
-  var x = document.getElementById("navBar");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
-
 function myFunction() {
   var x = document.getElementById("myDIV");
   if (x.style.display === "none") {
@@ -456,3 +446,4 @@ function myFunction() {
   }
 }
 </script>
+
