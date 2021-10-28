@@ -1,3 +1,25 @@
+</div>
+<style>
+#field , #myBtn{
+backdrop-filter: blur(6px);
+background: #fcfcfc33;
+border-radius: 20px;
+border: #ffffff 1px solid;
+justify-content: center;
+text-align: center;
+}
+.form{
+justify-content: center !important;
+}
+#field {
+width: 400px;
+}
+#urlbar{
+display: flex;
+justify-content: center;
+
+}
+</style>
 
 <script type="text/javascript">
         document.getElementById("myBtn").addEventListener("click", function(){
@@ -58,11 +80,17 @@ top:0;
 }
 
 
-</script>
+</script><p>Please wait in<div id="typedtext"></div></p><div id="urlbar"v><form POST="">
+    <input placeholder="Type in a URL with http:// or https://" type="text" id="field" />
+    <button id="myBtn">Go</button>
 
-<form id="myForm">
-    <input placeholder="Enter URL to open a new tab (insert http:// or https://)" style="width:40%;" type="text" id="field" />
-    <button style="z-index: 99999 !important; font-family: Roboto, Helvetica, Arial; color: #f2f2f2;background-color: #ffffff22;border-radius: 100px;text-align: center;border: none;padding: 8px 16px;text-decoration: none;font-size: 17px;" id="myBtn">Go</button></form> <p>Please wait in<div id="typedtext"></div>seconds</p>
+    <script type="text/javascript">
+        document.getElementById("myBtn").addEventListener("click", function(){
+            var url = document.getElementById("field").value;
+window.open(url);
+        });
+    </script>
+</form>
   <script>// set up text to print, each item in array is new line
 var aText = new Array(
 "60s", 
@@ -196,7 +224,7 @@ z-index: 99999;
   padding: 5px 3px;
 }
 
-.navbar a, .navbar button, .ripple, button.showbtn, input {
+.navbar a, .navbar button, .ripple, button.showbtn, input, button {
   float: left;
   font-family: Roboto, Helvetica, Arial; 
   display: block;
@@ -212,14 +240,14 @@ z-index: 99999;
 </style>
 </head>
 
-<div id="myDIV" class="navbar">  
+<div id="navBar" class="navbar">  
   <button type="button" onclick="location.href='https://cseriestechhero.github.io/about.lctapps_1994-STUDIOS';" >About</button>
 
   <a onclick="launch_toast()">News (LIED STUDENTS PLEASE READ!!!)</a>
   <a onclick="openNav()">Contact LCTapps</a>
 	  <button type="button" onclick="location.href='https://docs.google.com/presentation/d/e/2PACX-1vQw7l4XopIFZVjztgCItTSt5Fl-iqkvYf3iqbw2p6vrq0lOskPLGld6Q3p_jgyYyRv3ElJ228FI38CT/embed?rm=minimal';" >Get LCTapps Browser</button><form id="myForm" post="field">
-  <button style="float: right;font-size: 14px;" onclick="myFunction()" title="hide navigation shelf"><strong>▽</strong></button>
-</div><button class="showbtn" style="position: fixed; right: 0; bottom:0;" onclick="myFunction()">˄</button><style>
+  <button style="float: right;font-size: 14px;" onclick="showBar()" title="hide navigation shelf"><strong>▽</strong></button>
+</div><button class="showbtn" style="position: fixed; right: 0; bottom:0;" onclick="showBar()">˄</button><style>
 .overlay {
   height: 0%;
   width: 100%;
@@ -409,6 +437,16 @@ function closeNav() {
 </html>
 
 <script>
+function showBar() {
+  var x = document.getElementById("navBar");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
 function myFunction() {
   var x = document.getElementById("myDIV");
   if (x.style.display === "none") {
