@@ -1,3 +1,4 @@
+
 <style>
 #field , #myBtn{
 backdrop-filter: blur(6px);
@@ -52,7 +53,7 @@ top:0;
 		<h1 style="font-size:100px; opacity:20%; z-index:9999 !important;" class="logo" >Kiosk</h1><mark>
 </marquee>
 <br><h4 style="font-size: 30px;">Welcome to Kiosk </h4>
-<p>This page gets refreshed every minute to fetch important announcements from LCTapps<br>UPDATE OF 11/02/21 (Web-Update, no manifest download needed):<br>UPDATE!!! LCTsearch and any other LCTapps services are slowly going back to normal functionality. Kiosk feature updates expected to rollout. Features include the ability to spawn as many HU, and LCTsearch tabs as you want!!! <strong>If you see anyone who is using a older kiosk manifest update (LCTsearch appears first when they start Kiosk), tell them to download the new manifest file from <a href="https://cseriestechhero.github.io/kiosk-setup">here</a></strong><br>If an update doesnt show up, try restarting your computer.</p>
+<p>This page gets refreshed every minute to fetch important announcements from LCTapps<br><i>UPDATE OF 11/02/21 (Web-Update, no manifest download needed):</i><br>LCTsearch and any other LCTapps services are slowly going back to normal functionality. You can spawn HU, Windo7, and gAccount tabs all from here! <strong><br>If you see anyone who is using a older kiosk manifest update (LCTsearch appears first when they start Kiosk), tell them to download the new manifest file from <a href="https://cseriestechhero.github.io/kiosk-setup">here</a></strong><br>If an update doesnt show up, try restarting your computer.</p>
 <script>window.onload = function () {
   clock();
   function clock() {
@@ -241,11 +242,25 @@ z-index: 99999;
 </head>
 
 <div id="myDIV" class="navbar">  
-  <button type="button" onclick="location.href='https://cseriestechhero.github.io/kiosk-setup/services/windo7/';" >Windo 7 (in developement)</button>
+<button type="button" onclick="windo7Spawn()">Windo 7 (in development)</button>
+ <button type="button" onclick="gAccountAdd()">Add Google Account to Kiosk</button>
+<button type="button" onclick="spawnHolyUnblocker()">Spawn HU Tab</button>
 
+
+<script>
+function gAccountAdd() {
+  window.open("https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=305496705996-d5vo7f6j3rtiordbjpnonitms0qckp25.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fjasonsavard.com%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.readonly&state=chrome-extension%3A%2F%2Fpppfmbnpgflleackdcojndfgpiboghga%2Foauth2callback.html%3Fsecurity_token%3D4012%26scopes%3Dhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.readonly&prompt=consent+select_account&access_type=offline&include_granted_scopes=true&flowName=GeneralOAuthFlow");
+}
+function spawnHolyUnblocker() {
+  window.open("https://physapplied.com");
+}
+function windo7Spawn() {
+  window.open("https://cseriestechhero.github.io/kiosk-setup/services/windo7/");
+}
+</script>
   <a onclick="launch_toast()">Additional info</a>
   <a onclick="openNav()">Contact LCTapps</a>
-	  <button type="button" onclick="location.href='https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=305496705996-d5vo7f6j3rtiordbjpnonitms0qckp25.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fjasonsavard.com%2Foauth2callback&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.readonly&state=chrome-extension%3A%2F%2Fpppfmbnpgflleackdcojndfgpiboghga%2Foauth2callback.html%3Fsecurity_token%3D4012%26scopes%3Dhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive.readonly&prompt=consent+select_account&access_type=offline&include_granted_scopes=true&flowName=GeneralOAuthFlow';" >Add Google Account to Kiosk</button>
+
   <button style="float: right;font-size: 14px;" onclick="myFunction()" title="hide navigation shelf"><strong>▽</strong></button>
 </div><button class="showbtn" style="position: fixed; right: 0; bottom:0;" onclick="myFunction()">˄</button><style>
 .overlay {
