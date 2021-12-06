@@ -24,7 +24,7 @@ input,select{vertical-align:middle;outline: none;}
 	overflow: hidden;
 	background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
     background-attachment: fixed !important;
     top: 0;
     bottom: 0;
@@ -167,30 +167,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bce0ee', end
     margin: 2px 0 0 10px;
     font-size: 17px;
     padding: 0 10px;
-    background: #CCC;
     font-weight: bold;
 	cursor: pointer;
 }
 .taskbarPanel.activeTab {
-	background: #FFF;
+	background: #FFFFFF44;
 }
 .taskbarPanel.minimizedTab {
-	background: #AAA;	
+	background: #FFFFFF22;
 }
 .taskbarPanel.minimizedTab:hover {
-	background: #DDD;
+	background: #FFFFFF66;
 }
 .taskbarPanel.closed {
 	display: none;
 }
 #taskbar {
 	position: absolute;
-	height: 32px;
 	border-top: 2px solid #000;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: #EEE;
 }
 #icons {
 	position: absolute;
@@ -250,7 +247,7 @@ border: 3px inset;
 #window7 .wincontent {	width: 500px; height: 600px;	}
 @media screen and (max-width:960px){
 	#window0 {	left: 10px;	}
-	#window3 {	left: 50px;	}	
+	#window3 {	left: 50px;	}
 }
 @media screen and (max-width:770px){
 	#window0 .wincontent {	width: 460px;	}
@@ -268,7 +265,7 @@ border: 3px inset;
 #window1 .wincontent {    width: auto;    height: 300px;	}
 }
 .settingui {
-  font-family: Roboto, Helvetica, Arial; 
+  font-family: Roboto, Helvetica, Arial;
 font-weight: 600;
   color: #f2f2f2;
   background-color: #00000022;
@@ -281,7 +278,8 @@ font-weight: 600;
 }
 
 .dark-mode * {
-  background-color: #242424 !important;
+  background-color: #24242466 !important;
+  backdrop-filter: blur(6px);
   color: lightgray !important;
   border-color: white;
 }
@@ -332,4 +330,29 @@ font-weight: 600;
 	text-decoration: none;
 	color: black;
 	border: 2px inset;
+}
+.navbar {
+  overflow: hidden;
+z-index: 99999;
+  background-color: #11111188;
+  backdrop-filter: blur(10px);
+  border-radius: 25px 25px 0px 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 3px 3px;
+}
+
+.navbar a, .navbar button, .ripple, button.showbtn, .taskbar, .taskbarPanel {
+  float: left;
+  font-family: Roboto, Helvetica, Arial;
+  display: block;
+  color: #f2f2f2;
+  background-color: #ffffff22;
+ border-radius: 100px;
+  text-align: center;
+  border: none;
+  padding: 6px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
