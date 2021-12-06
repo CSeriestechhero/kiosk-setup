@@ -87,7 +87,7 @@ function myFunction() {
 			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/redidmaze/software/nav.html"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Browser">
-			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/apps/browserlite.html"></iframe>
+			<iframe style="height: 100%; width: 100%; margin: 0px; border: none; left: 0;" src="files/apps/browserlite.html"></iframe>
 		</div>
 		<div id="bgchanger" class="window closed" data-title="Options">
 			<h1 class="settingui" >Options</h1><br>
@@ -149,7 +149,9 @@ d.addEventListener('DOMContentLoaded', function(){
 <textarea style="resize:none;" id="textArea" placeholder="Start typing ..."></textarea>
 		</div>
 
-		<div id="taskbar">
+		<div id="taskbar" class="navbar">
+		    <button style="float: right;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>▽</strong></button>
+
 		</div>
 
 		<div id="icons">
@@ -162,10 +164,20 @@ d.addEventListener('DOMContentLoaded', function(){
 			<a class="openWindow" data-id="6">song test</a><br>
 			<a class="openWindow" data-id="7">Notepad</a><br>
 		</div>
-
+  <button style="float: right;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>▽</strong></button>
 		<a href="" rel="nofollow" target="_blank" id="templateLink">&copy; </a>
 		<!-- You can use this template freely if you leave a visible link to HTML5-Templates.com -->
 	</div>
+	<script>
+function hideBar() {
+  var x = document.getElementById("taskbar");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 </body>
 
 </html>
