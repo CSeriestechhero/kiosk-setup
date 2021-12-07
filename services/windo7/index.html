@@ -121,13 +121,17 @@ m.source('files/uploads/hypp3rr x ace of spadez - 13013013 𓆉 {p. sujo} ༼ �
 	  	</script></div></div>
 				<div style="padding:none !important;" class="window closed app" data-title="Notepad">
 				<script src="notepadDev.js"></script>
-<form class="notemenu" onsubmit="download(this['name'].value, this['text'].value)">
+<form id="noteApp" class="notemenu" onsubmit="download(this['name'].value, this['text'].value)">
   <input type="text" id="noteTitle" name="name" value="Untitled.txt"><input style="width: 50px;" id="saveBtn" type="submit" value="Save">
   <textarea  id="textArea" name="text">This notepad does not autosave, make sure to hit the save button so you can download your note to your device! Additionally, saving restarts Windo 7 so make sure everything else is closed and ready...
   You can clear this text when you're ready to start writing.</textarea>
 
 </form>
-
+<script>
+var form = document.getElementById("noteApp");
+function handleForm(event) { event.preventDefault(); }
+form.addEventListener('submit', handleForm);
+</script>
 		</div>
 
 		<div id="taskbar" class="navbar">
