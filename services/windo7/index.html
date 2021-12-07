@@ -120,33 +120,14 @@ function myFunction() {
 m.source('files/uploads/hypp3rr x ace of spadez - 13013013 𓆉 {p. sujo} ༼ つ ◕◡◕ ༽つ.mp3')
 	  	</script></div></div>
 				<div style="padding:none !important;" class="window closed app" data-title="Notepad">
-				<script>var d = document;
+				<script src="notepadDev.js"></script>
+<form class="notemenu" onsubmit="download(this['name'].value, this['text'].value)">
+  <input type="text" id="noteTitle" name="name" value="Untitled.txt"><input style="width: 50px;" id="saveBtn" type="submit" value="Save">
+  <textarea  id="textArea" name="text">This notepad does not autosave, make sure to hit the save button so you can download your note to your device! Additionally, saving restarts Windo 7 so make sure everything else is closed and ready...
+  You can clear this text when you're ready to start writing.</textarea>
 
-// not using this at the moment but might do later for graceful degradation...
-function supports_html5_storage() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch (e) {
-    return false;
-  }
-}
+</form>
 
-d.addEventListener('DOMContentLoaded', function(){
-
-  var savedContent = localStorage.getItem("notepadcontent");
-  if(savedContent != null){
-    d.getElementById("textArea").value = savedContent;
-  }
-
-
- d.getElementById("textArea").onkeyup = function(){
-  var data = d.getElementById("textArea").value;  localStorage.setItem("notepadcontent", data);
-  }
-});
-</script><script src="notepadDev.js"></script>
-<div class="notemenu">
-<a href="javascript:localStorageToFile()">Save</a></div>
-<textarea style="resize:none;" id="textArea" placeholder="Start typing ..."></textarea>
 		</div>
 
 		<div id="taskbar" class="navbar">
