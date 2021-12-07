@@ -286,9 +286,21 @@ font-weight: 600;
 
 #textArea {
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   font-size: 1em;
   padding: 1em;
+  border: 2px inset;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+  bottom: 1px !important;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+ 
+#noteTitle {
+  width: 90%;
   border: 2px inset;
   box-sizing: border-box;
   outline: none;
@@ -301,6 +313,7 @@ font-weight: 600;
 
 .notemenu {
 	width: 100%;
+	height: 100%;
 	padding: 2px 0px;
 	position: relative;
 	left: 0;
@@ -312,7 +325,7 @@ font-weight: 600;
 
 }
 
-.notemenu a {
+.notemenu #saveBtn {
 	width: 100%;
 	left: 0;
 	top: 0;
@@ -323,13 +336,11 @@ font-weight: 600;
 
 }
 
-.notemenu a:active {
+.notemenu #saveBtn:active {
 	width: 100%;
 	left: 0;
 	top: 0;
 	text-decoration: none;
-	color: black;
-	border: 2px inset;
 }
 .navbar {
   overflow: hidden;
@@ -356,3 +367,10 @@ z-index: 99999;
   text-decoration: none;
   font-size: 17px;
 }
+	color: black;
+	border: 2px inset;
+	
+	#savebtn {
+	  float: right;
+	  
+	}
