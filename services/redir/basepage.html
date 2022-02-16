@@ -270,9 +270,9 @@ z-index: 99999;
 
 <div id="myDIV" class="navbar">  
 <button type="button" onclick="windo7Spawn()">Windo 7 (in development)</button>
- <button type="button" onclick="gAccountAdd()">Add Google Account to Kiosk</button>
-	<button type="button" onclick="spawnHolyUnblocker()">Spawn HU Tab</button>
-
+<button type="button" onclick="gAccountAdd()">Add Google Account to Kiosk</button>
+<button type="button" onclick="spawnHolyUnblocker()">Spawn HU Tab</button>
+<button type="button" onclick="kioskSurvey()">Kiosk Survey</button>
 
 <script>
 function gAccountAdd() {
@@ -283,6 +283,9 @@ function spawnHolyUnblocker() {
 }
 function windo7Spawn() {
   window.open("https://cseriestechhero.github.io/kiosk-setup/services/windo7/");
+}
+function kioskSurvey() {
+  window.open("https://cseriestechhero.github.io/kiosk-setup/services/redir/override-12-09-21");
 }
 </script>
   <a onclick="launch_toast()">Additional info</a>
@@ -464,7 +467,7 @@ function closeNav() {
 }</style>
 
 
-<div id="toast" contenteditable="true"><div id="img">News</div><div id="desc">Still awaiting TN admin to restock HU domains in case something goes down...</div></div>
+<div id="toast" contenteditable="true"><div id="img">News</div><div id="desc">Kiosk Survey has been put in the shelf, and will not automatically appear on Kiosk start-up.</div></div>
 
 <!-- http://jsfiddle.net/m8x1g0q8/ --><script>function launch_toast() {
     var x = document.getElementById("toast")
