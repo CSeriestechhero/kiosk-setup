@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="jquery-ui.css">
+	<link rel="canonical" href="https://html5-templates.com/" />
+	<script src="jquery-1.12.4.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="lockDownStyle.css" />
+	<link rel="stylesheet" type="text/css" href="contextLockDown.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"/>
+	<link href="lockRec/fontCSS.css"
+      rel="stylesheet">
+	<script src="context.js"></script>
+<script src="microne.js"></script>
+	<title>Windo 7</title>
+</head>
+<body>
+	<div id="desktop">
+	<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+	<div class="position">
+    <div class="container" align="center">
+        <table style="text-align: left; width: 99%; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+            <tbody>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;"  class="openWindow" data-id="0"><a>Login</a><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle; text-align: center;" class="openWindow" data-id="1"><a>Options</a><br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+		<div class="window app" data-title="Login">
+<p style="text-align: center;">Enter your login information.</p><br>
+<form id="login" style="align-items:center;" name="login">
+<input placeholder="Username" type="text" name="userid"/><br><Br>
+<input placeholder="Password" type="password" name="pswrd"/><br><br>
+<input class="btn" type="button" onclick="check(this.form)" value="Login"/>
+<input class="btn" type="reset" value="Clear"/>
+</form>
+
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "cseriestechhero" && form.pswrd.value == "test0000")
+  {
+    window.location.replace("session.html")/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Wrong username OR password.")/*displays error message*/
+  }
+}
+</script>
+</div>
+
+		<div id="bgchanger" class="window closed app" data-title="Options">
+			<h1 class="settingui" >Options</h1><br>
+			<script type="text/javascript">
+    var defaultImage = "lockRec/bgimg.png";
+    document.getElementsByTagName('div')[0].style.backgroundImage = localStorage.getItem('back') ? "url('"+localStorage.getItem('back')+"')" : "url('"+defaultImage+"')";
+  function changebackground(){
+      var url =  document.getElementById('bgchanger').value;
+      document.getElementsByTagName('div')[0].style.backgroundImage = "url('" + url + "')";
+      localStorage.setItem('back',url);
+    }
+</script><input class="settingui" style="width: 70%;" type="text" id="bgchanger" placeholder="Change Background Add URL" />
+<input class="settingui" type="button" onclick="changebackground();" value="Change!" /><br><span style="text-align: center;">---</span>
+		<div><button onclick="myFunction()">Toggle dark mode</button></div>
+		</div>
+		
+    <div id="icons">
+    		<a class="openWindow" data-id="0">login</a>
+			<a class="openWindow" data-id="1">settings</a>
+    </div>
+</body>
+</html>
