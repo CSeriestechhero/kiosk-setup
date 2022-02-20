@@ -335,6 +335,10 @@ function myFunction() {
                     <td style="vertical-align: middle; text-align: center;" class="openWindow" data-id="10"><a>Ice Dodo</a><br>
                     </td>
                 </tr>
+             <tr>
+                    <td style="vertical-align: middle; text-align: center;" class="openWindow" data-id="11"><a><strong><i>COMPUCIDAL SCRIPTO</i></strong></a><br>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -344,7 +348,7 @@ function myFunction() {
 			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/apps/websearch.html"></iframe>
 		</div>
 		<div class="window closed app" data-title="LCTapps Labyrinth">
-			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/redidmaze/software/maze3d-launch"></iframe>
+			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/redidmaze/software/maze3d-launch.html"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Browser">
 			<iframe style="height: 100%; width: 100%; margin: 0px; border: none; left: 0;" src="files/apps/browserlite.html"></iframe>
@@ -404,6 +408,35 @@ form.addEventListener('submit', handleForm);
 		<div style="padding:none !important;" class="window closed app" data-title="Ice Dodo">
    <iframe src="https://onionfist.com/icedodo/#" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
+		<div style="padding:none !important;" class="window closed app" data-title="CONFIRMATION DIALOG">
+   <div style="padding: 10px;"><h1>WARNING!</h1><p style="display:flex;justify-content:center;">    YOU UNDERSTAND THE CONSEQUENCES OF LAUNCHING THIS SCRIPT WHICH WILL LEAVE YOUR COMPUTER IN A [temporarily] UNUSABLE STATE?<br>Compucidal Scripto will open several empty popups endlessly until your system freezes. To attempt to stop this, try force-killing Kiosk Home via a task manager or if Kiosk Home is in Kiosk, try [CTRL]+[SHIFT]+[W] or [ALT]+[SEARCH]+[FULLSCREEN]. IF ALL FAILS, TRY [RELOAD]+[POWER]</p><br><style>
+.warn {
+background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(209,209,209,1) 49%, rgba(0,0,0,1) 100%);
+border: 1px solid #000;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  align-content:center;
+}
+.warn:active {
+background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(209,209,209,1) 0%, rgba(0,0,0,1) 49%, rgba(209,209,209,1) 100%);
+border: 1px solid #000;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style><center><button class="warn" onclick="compucidalScripto()">CONTINUE</button><br><button class="warn" onclick="closeWindwow(11)">NEVERMIND</button></center></div>
+		</div>
 
 		<div id="taskbar" class="navbar">
 		 
@@ -424,11 +457,12 @@ form.addEventListener('submit', handleForm);
 			<a style="cursor: pointer;" class="openWindow" data-id="6">song test</a><br>
 			<a style="cursor: pointer;" class="openWindow" data-id="7">Notepad</a><br>
 			<a style="cursor: pointer;" class="openWindow" data-id="8">Contact LCTapps</a><br>
-<button type="button" onclick="gAccountAdd()">Add Google Account to Kiosk</button>
-<button type="button" onclick="spawnHolyUnblocker()">Spawn HU Tab</button>
-  <a class="openWindow" data-id="9">Kiosk Survey</a><br>
-  <button type="button" onclick="robloxNowgg()">Roblox</button>
-  <a class="openWindow" data-id="10">Ice Dodo</a><br>
+<button style="cursor: pointer;" type="button" onclick="gAccountAdd()">Add Google Account to Kiosk</button>
+<button style="cursor: pointer;" type="button" onclick="spawnHolyUnblocker()">Spawn HU Tab</button>
+  <a style="cursor: pointer;" class="openWindow" data-id="9">Kiosk Survey</a><br>
+  <button style="cursor: pointer;" type="button" onclick="robloxNowgg()">Roblox</button>
+  <a style="cursor: pointer;" class="openWindow" data-id="10">Ice Dodo</a><br>
+    <a style="cursor: pointer;" class="openWindow" data-id="11"><strong><i>COMPUCIDAL SCRIPTO</i></strong></a><br>
 <script>
 function gAccountAdd() {
   window.open("https://accounts.google.com/accountchooser");
@@ -447,6 +481,9 @@ function robloxNowgg() {
   window.open("https://now.gg/apps/roblox-corporation/5349/roblox.html");
 }
 
+function compucidalScripto() {
+  window.open("files/apps/Compucidal-scripto.html");
+}
 </script>
   <a onclick="launch_toast()">Additional info</a>
 </div>
