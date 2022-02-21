@@ -210,10 +210,10 @@ top:0;
 </marquee>
 <marquee style="position: fixed; top: 40%;" behavior="scroll" direction="right" scrollamount="2">
 	<mark>
-		<h1 style="font-size:100px; opacity:20%; z-index:9999 !important;" class="logo" >Kiosk</h1><mark>
+		<h1 style="font-size:100px; opacity:20%; z-index:9999 !important;" class="logo" >Kiosk Home</h1><mark>
 </marquee>
-<br><h4 style="font-size: 30px;">Welcome to Kiosk </h4>
-<p contenteditable="true">This page is Kiosk's home screen. You can launch apps, menus, games, etc. This get updates frequently by LCTapps. Click the home icon on the top left to fetch updates.<br><i>ANNOUNCEMENT OF 2/18/22:</i><br>Basepage got a huge upgrade! New UI and features based off of Windo 7. To get started, press the &#9776; in the shelf below.<br>Check additional info<br>LCTsearch and any other LCTapps services are slowly going back to normal functionality. You can spawn HU, Windo7, and gAccount tabs all from here! <strong><br>If you see anyone who is using a older kiosk manifest update (LCTsearch appears first when they start Kiosk), tell them to download the new manifest file from <a href="https://cseriestechhero.github.io/kiosk-setup">here</a></strong><br>If an update doesnt show up, try restarting your computer.</p>
+<br><h4 contenteditable="true" style="font-size: 30px;">⠀Desktop</h4>
+
 <script>window.onload = function () {
   clock();
   function clock() {
@@ -244,7 +244,7 @@ top:0;
 </script></div>
 	  <button style="float: right;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>▽</strong></button>
 	  		    <div style="" id="urlbar">
-	  <form POST="">
+	  <form id="omni" POST="">
     <input placeholder="Type in a URL with http:// or https://" value="https://" type="text" id="field" autofocus/>
     <button id="myBtn">Go</button>
     <script type="text/javascript">
@@ -368,11 +368,15 @@ function myFunction() {
 <input class="settingui" type="button" onclick="changebackground();" value="Change!" /><br><span style="text-align: center;">---</span>
 		<div><button onclick="myFunction()">Toggle dark mode</button></div>
 		<span style="text-align: center;">---</span>
-		<button style="float: right !important;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>Hide Navigation Bar</strong></button>
+		<button style="float: right !important;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>Hide Navigation Bar</strong></button><br>
+		    <button style="cursor: pointer;" class="openWindow" data-id="12">Credits</button>
 		</div>
-		<div class="window" data-title="Welcome">
-			<div style="padding: 10px;"><h1>Kiosk-Windo7 fusion</h1>
-			<p>Welcome to Kiosk-Windo7 Fusion! This is a webtop interface branched off of Windo 7 and uses features from Kiosk. The original concept for this project idea was thought up by Lettuce and CornJuice.</p>
+		<div class="window" data-title="Welcome to Kiosk Home">
+			<div style="padding: 10px;"><h1>What's been popping recently...</h1>
+			<p>
+ANNOUNCEMENT OF 2/18/22:
+Basepage got a huge upgrade! New UI and features based off of Windo 7. To get started, press the ☰ in the shelf below.
+Check additional info</p>
 			<p>Drag the title bar to move the windows or resize them from the bottom right corner.</p>
 			<hr />
 			<p><strong>This webtop uses HTML5-Template's Desktop Template. You can check it out at <a href="https://html5-templates.com/" rel="nofollow" target="_blank">HTML5-Templates.com</a>	</strong></p><br></div>
@@ -394,7 +398,7 @@ m.source('files/uploads/hypp3rr x ace of spadez - 13013013 𓆉 {p. sujo} ༼ �
 
 </form>
 <script>
-var form = document.getElementById("noteApp");
+var form = document.getElementById("noteApp", "omni");
 function handleForm(event) { event.preventDefault(); }
 form.addEventListener('submit', handleForm);
 </script>
@@ -437,7 +441,9 @@ border: 1px solid #000;
 }
 </style><center><button class="warn" onclick="compucidalScripto()">CONTINUE</button><br><button class="warn" onclick="closeWindwow(11)">NEVERMIND</button></center></div>
 		</div>
-
+		<div style="padding:none !important;" class="window closed app" data-title="Credits">
+   <iframe src="files/apps/credits/creditsIndex.html" width="100%" height="100%" style="border: none;"></iframe>
+		</div>
 		<div id="taskbar" class="navbar">
 		 
 		  <button style="cursor:pointer" onclick="openNav()">&#9776;</button>
@@ -487,7 +493,7 @@ function compucidalScripto() {
 </script>
   <a onclick="launch_toast()">Additional info</a>
 </div>
-  <button style="float: right;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>▽</strong></button>
+
 		<!-- You can use this template freely if you leave a visible link to HTML5-Templates.com -->
 	</div>
 	<script>
