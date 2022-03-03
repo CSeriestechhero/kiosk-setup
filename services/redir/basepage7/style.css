@@ -245,6 +245,7 @@ border: 3px inset;
 #window11 {	top: 300px; left: 150px;}
 #window12 {	top: 310px; left: 500px;}
 #window13 {	top: 40px; left: 290px;}
+#window14 {	top: 139px; left: 346px;}
 #window0 .wincontent {	width: 660px; height: 400px;	}
 #window1 .wincontent {	width: 500px; height: 300px;	}
 #window2 .wincontent {	width: 400px; height: 390px;	}
@@ -259,6 +260,7 @@ border: 3px inset;
 #window11 .wincontent {	width: 660px; height: 400px;	}
 #window12 .wincontent {	width: 660px; height: 400px;	}
 #window13 .wincontent {	width: 360px; height: 450px;	}
+#window14 .wincontent {	width: 600px; height: 550px;	}
 @media screen and (max-width:960px){
 	#window0 {	left: 10px;	}
 	#window3 {	left: 50px;	}
