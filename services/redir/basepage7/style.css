@@ -262,7 +262,7 @@ border: 3px inset;
 #window12 .wincontent {	width: 660px; height: 400px;	}
 #window13 .wincontent {	width: 360px; height: 450px;	}
 #window14 .wincontent {	width: 600px; height: 550px;	}
-#window15 .wincontent {	width: 300px; height: 600px;	}
+#window15 .wincontent {	width: 430px; height: 600px;	}
 @media screen and (max-width:960px){
 	#window0 {	left: 10px;	}
 	#window3 {	left: 50px;	}
