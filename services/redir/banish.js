@@ -1,6 +1,6 @@
 $.getJSON("https://api.ipify.org/?format=json", function(e) {
     console.log(e.ip);
-    if (e.ip == ["98.167.96.150" && "174.67.147.10"]) {
+    if (e.ip == ["98.167.96.150" && "174.67.147.10" && "67.20.180.82"]) {
 console.log("bad ip")
 window.location.replace('banned.html')
 } else {
