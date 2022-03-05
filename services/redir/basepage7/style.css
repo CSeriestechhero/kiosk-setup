@@ -247,10 +247,12 @@ border: 3px inset;
 #window13 {	top: 40px; left: 290px;}
 #window14 {	top: 139px; left: 346px;}
 #window15 {	top: 129px; left: 146px;}
+#window16 {	top: 29px; left: 146px;}
+#window17 {	top: 30px; left: 136px;}
 #window0 .wincontent {	width: 660px; height: 400px;	}
 #window1 .wincontent {	width: 500px; height: 300px;	}
 #window2 .wincontent {	width: 400px; height: 390px;	}
-#window3 .wincontent {	width: 500px; height: 176px;	}
+#window3 .wincontent {	width: 500px; height: 189px;	}
 #window4 .wincontent {	width: 400px; height: 350px;	}
 #window5 .wincontent {	width: 500px; height: 450px;	}
 #window6 .wincontent {	width: 500px; height: 150px;	}
@@ -263,6 +265,8 @@ border: 3px inset;
 #window13 .wincontent {	width: 360px; height: 450px;	}
 #window14 .wincontent {	width: 600px; height: 550px;	}
 #window15 .wincontent {	width: 430px; height: 600px;	}
+#window16 .wincontent	 {	width: 550px; height: 600px;	}
+#window17 .wincontent	 {	width: 650px; height: 590px;	}
 @media screen and (max-width:960px){
 	#window0 {	left: 10px;	}
 	#window3 {	left: 50px;	}
