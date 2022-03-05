@@ -351,6 +351,10 @@ function myFunction() {
                     <td style="vertical-align: middle; text-align: center;" class="openWindow" data-id="15"><a>1998 Instant Messaging</a><br>
                     </td>
                 </tr>
+             <tr>
+                    <td style="vertical-align: middle; text-align: center;" class="openWindow" data-id="17"><a>HexGL</a><br>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -381,7 +385,7 @@ function myFunction() {
 		<div><button onclick="myFunction()">Toggle dark mode</button></div>
 		<span style="text-align: center;">---</span>
 		<button style="float: right !important;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>Hide Navigation Bar</strong></button><br>
-		    <button style="cursor: pointer;" class="openWindow" data-id="12">Credits</button>
+		    <button style="cursor: pointer;" class="openWindow" data-id="12">Credits</button><br><button style="float: right !important;font-size: 14px;" class="openWindow" data-id="16" title="lctcmd"><strong>LCTcmd</strong></button>
 		</div>
 		<div class="window" data-title="Welcome to Kiosk Home">
 			<div style="padding: 10px;"><h1>What's been popping recently...</h1>
@@ -463,10 +467,15 @@ border: 1px solid #000;
    <iframe src="https://onionfist.com/tungli/" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Socialselect">
-   <iframe src="files/apps/socialselect" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe src="files/apps/socialselect.html" width="100%" height="100%" style="border: none;"></iframe>
+		</div>
+		<div style="padding:none !important;" class="window closed app" data-title="LCTcmd">
+   <iframe src="files/apps/lctcmd/cmd/prompt.html" width="100%" height="100%" style="border: none;"></iframe>
+   </div>
+		<div style="padding:none !important;" class="window closed app" data-title="HexGL">
+   <iframe src="files/apps/hxgl/hexgl-launch.html" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div id="taskbar" class="navbar">
-		 
 		  <button style="cursor:pointer" onclick="openNav()">&#9776;</button>
 		  <button style="float: right;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>▽</strong></button>
 		</div>
@@ -493,6 +502,7 @@ border: 1px solid #000;
     <a style="cursor: pointer;" class="openWindow" data-id="13">Shortcut Nest</a><br>
     <a style="cursor: pointer;" class="openWindow" data-id="14">Tunnel Glider</a><br>
 <a style="cursor: pointer;" class="openWindow" data-id="15">1998 IM</a><br>
+<a style="cursor: pointer;" class="openWindow" data-id="17">HexGL</a><br>
 <script>
 function gAccountAdd() {
   window.open("https://accounts.google.com/accountchooser");
