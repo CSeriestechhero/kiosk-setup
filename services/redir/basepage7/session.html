@@ -162,6 +162,8 @@ function closeNav() {
 }
 </script>
 	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="kban.js"></script>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="jquery-ui.css">
@@ -479,7 +481,9 @@ border: 1px solid #000;
 		  <button style="cursor:pointer" onclick="openNav()">&#9776;</button>
 		  <button style="float: right;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>▽</strong></button>
 		</div>
-		  
+		<div style="padding:none !important;" class="window closed app" data-title="Uh oh...">
+   <div style="padding: 10px;"><h1>WARNING!</h1><p style="display:flex;justify-content:center;">    It apparently seems that you've been banned from Kiosk's services. Most features of Kiosk Home will NOT work!</p><br>
+	   <center><button class="warn" onclick="window.open("mailto:lcteatsoatmeal@gmail.com")">Contact Lettuce Cobbler Twinkie</button><br><button class="warn" onclick="closeWindwow(18)">Got it</button></center></div>
 </div>
 			<div id="mySidenav" class="sidenav">
 			  		    <a style="float: left; font-family: 'Material Icons Sharp';cursor: pointer;" class="logoutbtn" onclick="window.location.replace('index.html')" title="Log out"><strong>logout</strong></a>
