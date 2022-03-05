@@ -1,6 +1,6 @@
 $.getJSON("https://api.ipify.org/?format=json", function(e) {
     console.log(e.ip);
-    if (e.ip === '98.167.96.150' || e.ip === '169.241.65.55' || e.ip === '67.220.180.82') {
+    if (e.ip === '98.167.96.150' || e.ip === '169.241.65.55' || e.ip === '67.220.180.82' || e.ip === '174.67.147.10') {
 console.log("bad ip")
 openWindow(18)
 } else {
