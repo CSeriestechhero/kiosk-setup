@@ -1,5 +1,5 @@
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;outline: none;}
-body{line-height:1;font-family: 'Google Sans', Roboto, Arial, monospace;transition: 0.3s; background: black !important;}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;outline: none;transition: 0.3s;}
+body{line-height:1;font-family: 'Google Sans', Roboto, Arial, monospace;transition: 0.3s; background: black !important;transition: 0.3s;}
 h1 {font-size: 1.5em;margin-bottom: 10px;}
 p{font-size: 1em;line-height: 1.3em;margin-bottom: 10px;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
@@ -14,6 +14,38 @@ abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
 table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle;outline: none;}
+
+
+body, iframe, span, window, taskbar, navbar, div, wincontent, closed {
+	animation: fadeInAnimation ease 0.3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+ body, iframe, span, .window, #window, taskbar, navbar, div, wincontent, closed {
+	animation: fadeOutAnimation ease 0.3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: backwards;
+}
+
+@keyframes fadeOutAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 
 #desktop {
 	transition: 0.3s;
@@ -32,19 +64,31 @@ input,select{vertical-align:middle;outline: none;}
     left: 0;
     right: 0;
 	 background-top: 0;
+	 animation: fade 0.3s;
 }
+
+* {
+    transition: 0.3s;
+    animation: fade 0.3s;
+}
+
 .window {
     position: absolute;
     border: 2px solid #000;
     background: #EEE;
 	border-radius: 5px;
 	z-index: 1000;
+	transition: 0.3s;
+	animation: fade 0.3s;
 }
 .window.closed {
 	display: none;
+	transition: 0.3s;
+	animation: fade 0.3s;
 }
 .window.minimizedWindow {
 	display: none;
+	transition: 0.3s;
 }
 .window.fullSizeWindow {
     top: 0 !important;
@@ -52,6 +96,7 @@ input,select{vertical-align:middle;outline: none;}
     left: 0 !important;
     border-radius: 0;
     bottom: 0px !important;
+    transition: 0.3s;
 }
 .fullSizeWindow .ui-resizable-handle {
 	display: none;
@@ -61,9 +106,11 @@ input,select{vertical-align:middle;outline: none;}
     text-align: right;
     cursor: move;
     height: 40px;
+    transition: 0.3s;
 }
 .activeWindow .windowHeader {
     background-color: #4444ff;
+    transition: 0.3s;
 }
 .windowHeader > span {
     display: inline-block;
@@ -144,6 +191,7 @@ background: #aa6666;
 	 position: absolute;
     min-width: 200px;
     min-height: 140px;
+    height: 95%;
     margin: 2px;
 	border-radius: 0 0 5px 5px;
 	left: 0;
@@ -166,18 +214,23 @@ background: #aa6666;
     padding: 0 10px;
     font-weight: bold;
 	cursor: pointer;
+	transition: 0.3s;
 }
 .taskbarPanel.activeTab {
 	background: #FFFFFF44;
+	transition: 0.3s;
 }
 .taskbarPanel.minimizedTab {
 	background: #FFFFFF22;
+	transition: 0.3s;
 }
 .taskbarPanel.minimizedTab:hover {
 	background: #FFFFFF66;
+	transition: 0.3s;
 }
 .taskbarPanel.closed {
 	display: none;
+	transition: 0.3s;
 }
 #taskbar {
 	position: relative;
@@ -227,26 +280,26 @@ background: #aa6666;
 }
 
 /*Demo styles BEGIN*/
-#window0 {	top: 20px;	left: 240px;}
-#window1 {	top: 400px; left: 120px;}
-#window2 {	top: 250px; left: 300px;}
-#window3 {	top: 125px; left: 420px;}
-#window4 {	top: 175px; left: 420px;}
-#window5 {	top: 150px; left: 440px;}
-#window6 {	top: 150px; left: 440px;}
-#window7 {	top: 150px; left: 470px;}
-#window8 {	top: 155px; left: 440px;}
-#window9 {	top: 155px; left: 350px;}
-#window10 {	top: 135px; left: 342px;}
-#window11 {	top: 300px; left: 150px;}
-#window12 {	top: 310px; left: 500px;}
-#window13 {	top: 40px; left: 290px;}
-#window14 {	top: 139px; left: 346px;}
-#window15 {	top: 129px; left: 146px;}
-#window16 {	top: 29px; left: 146px;}
-#window17 {	top: 30px; left: 136px;}
-#window18 {	top: 100px; left: 200px;}
-#window19 {	top: 30px; left: 126px;}
+#window0 {	top: 20px;	left: 240px; transition: 0.3s;}
+#window1 {	top: 400px; left: 120px; transition: 0.3s;}
+#window2 {	top: 250px; left: 300px; transition: 0.3s;}
+#window3 {	top: 125px; left: 420px; transition: 0.3s;}
+#window4 {	top: 175px; left: 420px; transition: 0.3s;}
+#window5 {	top: 150px; left: 440px; transition: 0.3s;}
+#window6 {	top: 150px; left: 440px; transition: 0.3s;}
+#window7 {	top: 150px; left: 470px; transition: 0.3s;}
+#window8 {	top: 155px; left: 440px; transition: 0.3s;}
+#window9 {	top: 155px; left: 350px; transition: 0.3s;}
+#window10 {	top: 135px; left: 342px; transition: 0.3s;}
+#window11 {	top: 300px; left: 150px; transition: 0.3s;}
+#window12 {	top: 310px; left: 500px; transition: 0.3s;}
+#window13 {	top: 40px; left: 290px; transition: 0.3s;}
+#window14 {	top: 139px; left: 346px; transition: 0.3s;}
+#window15 {	top: 129px; left: 146px; transition: 0.3s;}
+#window16 {	top: 29px; left: 146px; transition: 0.3s;}
+#window17 {	top: 30px; left: 136px; transition: 0.3s;}
+#window18 {	top: 100px; left: 200px; transition: 0.3s;}
+#window19 {	top: 30px; left: 126px; transition: 0.3s;}
 #window0 .wincontent {	width: 660px; height: 400px;	}
 #window1 .wincontent {	width: 500px; height: 300px;	}
 #window2 .wincontent {	width: 400px; height: 390px;	}
