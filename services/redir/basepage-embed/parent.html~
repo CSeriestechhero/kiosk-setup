@@ -1,0 +1,4 @@
+<script>
+document.body.innerHTML=`<script>function hideBar(){var x=document.getElementById("lctapps");if(x.style.display==="none"){x.style.display="block";}else{x.style.display="none";}}</script><iframe onload="parent.hideBar()" id="lctapps" style="position:fixed;top:0;bottom:0;left:0;right:0;height:100%;width:100%;border:none;display:block;" src="https://cseriestechhero.github.io/kiosk-setup/services/redir/basepage7/session"></iframe>`
+
+<script>
