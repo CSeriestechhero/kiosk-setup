@@ -1,3 +1,4 @@
+
     <meta name="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="jquery.console.js"></script>
@@ -29,7 +30,7 @@
     <script>
        var help = {
         toString: function() {
-          return "[HELP]: \n magiconsole allows users to debug their javascript/jquery code, and if embed in an application (such as windo 8), allows users to debug the frame's parent. this version of magiconsole is designed to work with windo 8 BETA, so custom commands focused for it's parent frame will be below: \n\n [WINDO 8 BETA BASE COMMANDS] \n WINDOW MANAGEMENT: \n Opening a window  | parent.openWindow(NUMBER)\n Closing a window (is spelled 'windwow')| parent.closeWindwow(NUMBER)\nMinimize a window | parent.minimizeWindow(NUMBER)\n Focus a window | parent.makeWindowActive(NUMBER)\n\n DESKTOP MANAGEMENT \n Hide navigation shelf | parent.hideBar()\n Open App Menu | parent.openNav()\n Close App Menu | parent.closeNav()\n\n[MAGICONSOLE SHORTCUTS]\n[CTRL]+[L] | Clear console history\n[CTRL]+[U] | Clear what you're currently inputting...\nMore commands can be seen by typing location.replace.href = \"jquery.console.js\""
+          return "[HELP]: \n magiconsole allows users to debug their javascript/jquery code, and if embed in an application (such as windo 8), allows users to debug the frame's parent. this version of magiconsole is designed to work with windo 8 BETA, so custom commands focused for it's parent frame will be below: \n\n [WINDO 8 BETA BASE COMMANDS] \n WINDOW MANAGEMENT: \n Opening a window  | parent.openWindow(NUMBER)\n Closing a window (is spelled 'windwow')| parent.closeWindwow(NUMBER)\nMinimize a window | parent.minimizeWindow(NUMBER)\n Focus a window | parent.makeWindowActive(NUMBER)\n\n DESKTOP MANAGEMENT \n Hide navigation shelf | parent.hideBar()\n Open App Menu | parent.openNav()\n Close App Menu | parent.closeNav()\n\n[WINDO 8 BETA ADVANCED COMMANDS] \n Reload session | reboot \n Reload magiconsole | reload \n Log out of windo session | logout \n Switch graphics settings | switchgraphx \n\n [MAGICONSOLE SHORTCUTS]\n[CTRL]+[L] | Clear console history\n[CTRL]+[U] | Clear what you're currently inputting...\nMore commands can be seen by typing location.replace.href = \"jquery.console.js\""
       }
  };
        var about = {
@@ -43,9 +44,22 @@
          }
        };
 
+       var reboot = {
+         toString: function() {
+            parent.location.reload();
+         }
+       };
+       
+
        var logout = {
          toString: function() {
             parent.window.location.replace("../../../index.html")
+         }
+       };
+
+       var switchgraphx = {
+         toString: function() {
+            parent.window.location.replace("../../../../switchgraphx.html")
          }
        };
 
