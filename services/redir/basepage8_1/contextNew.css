@@ -1,0 +1,44 @@
+.position {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    z-index: 99999;
+    display: none;
+}
+
+.container {
+    padding: 10px 0px 10px 0px !important;
+    width: 220px;
+    height: auto;
+    border: 4px line #ffffffcf !important;
+    background-color: #00000060;
+    color: #ffffffcf;
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+}
+
+.container p {
+	 height: 30px;
+    font-size: 18px;
+    font-family: Verdana;
+    width: 99%;
+    color: #ffffffcf;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p:hover {
+    background: #ffffff4c;
+}
+
+td {
+    font-family: arial;
+    font-size: 20px;
+}
+
+td:hover {
+    background: #ffffff4c;
+    cursor: pointer;
+}

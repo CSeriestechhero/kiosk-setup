@@ -231,7 +231,7 @@ top:0;
 	<mark>
 		<h1 style="font-size:100px; opacity:20%; z-index:9999 !important;" class="logo" >Kiosk Home</h1><mark>
 </marquee>
-<br><h4 contenteditable="true" style="font-size: 30px;">⠀Desktop</h4>
+<br><iframe style="position:fixed; top:0; bottom:0; left:0; right:0; height:100%; width: 100%;" src="files/apps/magiconsole/deskconsole.html"></iframe>
 
 <script>window.onload = function () {
   clock();
@@ -275,7 +275,7 @@ window.open(url);
     </script>
 </form>
 </div>
-	  <div id="toast" contenteditable="true"><div id="img">News</div><div id="desc">Added Shortnest & Tungli</div></div>
+	  <div id="toast" contenteditable="true"><div id="img">Info</div><div id="desc">Windo 8_1 (Kiosk Home) (Debug Version) Updated 08-08-2024</div></div>
 
 <!-- http://jsfiddle.net/m8x1g0q8/ --><script>function launch_toast() {
     var x = document.getElementById("toast")
@@ -391,7 +391,7 @@ function myFunction() {
 			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/redidmaze/software/maze3d-launch.html"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Browser">
-			<iframe style="height: 100%; width: 100%; margin: 0px; border: none; left: 0;" src="files/apps/browserlite.html"></iframe>
+			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/apps/browserlite.html"></iframe>
 		</div>
 		<div id="bgchanger" class="window closed" data-title="Options">
 			<h1 class="settingui" >Options</h1><br>
@@ -414,21 +414,23 @@ function myFunction() {
 		
 		</div>
 		<div class="window" data-title="Welcome to Kiosk Home">
-			<div style="padding: 10px;position:absolute; top:0; bottom:0; left:0; right:0; overflow-y: scroll;"><h1>Windo 8 Updates & Announcements</h1>
+			<div style="padding: 10px;position:absolute; top:0; bottom:0; left:0; right:0; overflow-y: scroll;">
+            
+                <h1>Updates:</h1>
 			<p>
-        UPDATE 08/08/24:
-        This is the first time in 2 years since Windo 8 has been updated. Fixes and changes include:<br>
-        - Changing Fonts and UI colors to bring about a slightly more appealing user interface.<br>
-        - Adding a Taskbar clock (so you do not have declutter your desktop to wait ~30s to see what the time is)<br>
-        - You can hide taskbar app name clutter, if you have multiple apps open and the taskbar grows to take up space, click the square button on the left of the time to hide currently open apps on the taskbar.<br>
-        - Fixed launching LCTapps labyrinth from the start menu (it automatically closes upon app selection)<br>
-        - Various fixes for app window sizing (slightly more stable)
+UPDATE 08/08/24:
+This is the first time in a while since Windo 8 has been updated. Fixes and changes include:<br>
+Changing Fonts and UI colors to bring about a slightly more appealing user interface.<br>
+Adding a Taskbar clock (so you do not have declutter your desktop to wait ~30s to see what the time is)<br>
+You can hide taskbar app name clutter, if you have multiple apps open and the taskbar takes up space. Click the square button on the left of the time to hide currently open apps on the taskbar.<br>
+Fixed launching LCTapps labyrinth from the start menu (it automatically closes upon app selection)
 				<br><strong>Check additional info!!!</strong></p>
 			<p>Drag the title bar to move the windows or resize them from the bottom right corner.<br>Not happy with Windo 8, and want to downgrade? Quickly fill out a report via right clicking, and then go back to <a href="../">here (just click back on the first thing!)</a></p>
 			<hr />
 			<p><strong>This webtop's ui uses HTML5-Template's Desktop Template. You can check it out at <a href="https://html5-templates.com/" rel="nofollow" target="_blank">HTML5-Templates.com</a>	</strong></p><br></div>
 
-		</div><div style="padding:none !important;" class="window closed app" data-title="Kiosk URL Loader">
+		</div>
+        <div style="padding:none !important;" class="window closed app" data-title="Kiosk URL Loader">
 	 <iframe src="https://cseriestechhero.github.io/kiosk-setup/services/redir/basepage" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div class="window closed app" id="player" data-title="song test">
@@ -440,7 +442,7 @@ m.source('files/uploads/hypp3rr x ace of spadez - 13013013 𓆉 {p. sujo} ༼ �
 				<script src="notepadDev.js"></script>
 <form id="noteApp" class="notemenu" onsubmit="download(this['name'].value, this['text'].value)">
   <input type="text" id="noteTitle" name="name" value="Untitled.txt"><input style="width: 50px;" id="saveBtn" type="submit" value="Save">
-  <textarea style="position:absolute; top:24px; bottom:0; left:0; right:0;overflow-y: auto;" id="textArea" name="text">This notepad does not autosave, make sure to hit the save button so you can download your note to your device! Additionally, saving restarts Windo 8 so make sure everything else is closed and ready...
+  <textarea style="position:absolute; top:24px; bottom:0; left:0; right:0;overflow-y: auto;"  id="textArea" name="text">This notepad does not autosave, make sure to hit the save button so you can download your note to your device! Additionally, saving restarts Windo 8 so make sure everything else is closed and ready...
   You can clear this text when you're ready to start writing.</textarea>
 
 </form>
@@ -520,7 +522,7 @@ border: 1px solid #000;
 		  <button class="taskbarPanel startButton" style="cursor:pointer" onclick="openNav()">K+</button>
       <div id="taskbar"></div>
 		  <button class="taskbarPanel hideNavBtn" style="float: right;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>▽</strong></button>
-      <span class="taskbarPanel barClock" style="font-family:'Roboto'; font-size: 14px; !important; float:right;" id="currentTimeTwo"></span>
+      <span class="taskbarPanel barClock" style="font-size: 14px; !important; float:right;" id="currentTimeTwo"></span>
       <button class="taskbarPanel hideOverflowBtn" style="float: right;font-size: 14px;" onclick="overflowPanel()" title="hide overflow"><strong>▣</strong></button>
 		</div>
 	

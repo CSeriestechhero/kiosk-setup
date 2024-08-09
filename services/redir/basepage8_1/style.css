@@ -1,7 +1,7 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;outline: none;}
-body{line-height:1;font-family: 'Google Sans', Roboto, Arial, monospace;transition: 0.3s; background: black !important;}
+body{line-height:1;font-family: "Product Sans", Roboto, Arial, monospace;transition: 0.3s; background: black !important;}
 h1 {font-size: 1.5em;margin-bottom: 10px;}
-p{font-size: 1em;line-height: 1.3em;margin-bottom: 10px;}
+p{font-family: 'Roboto' !important;font-size: 1em;line-height: 1.3em;margin-bottom: 10px;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 nav ul{list-style:none}
 blockquote,q{quotes:none}
@@ -17,7 +17,10 @@ input,select{vertical-align:middle;outline: none;}
 
 
 * {
-    transition: all 0.5s ease-out!important;
+  animation-name: Width!important;
+  animation-iteration-count: 1!important;
+  animation-timing-function: ease-in!important;
+  animation-duration: 1s!important;
 
 }
 
@@ -65,7 +68,7 @@ input,select{vertical-align:middle;outline: none;}
 
 #desktop {
 	transition: 0.3s;
-	font-family: 'Google Sans', Roboto, Arial, monospace;
+	font-family: 'Product Sans', Roboto, Arial, monospace;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -111,14 +114,14 @@ input,select{vertical-align:middle;outline: none;}
     height: 24px;
 }
 .activeWindow .windowHeader {
-    background-color: #4444ff;
+    background-color: #5d7afd;
 }
 .windowHeader > span {
     display: inline-block;
     cursor: pointer;
     font-size: 19px;
     padding: 0px 10px;
-    font-family: "Arial Black", Gadget, sans-serif;
+    font-family: "Arial Black", Gadget, sans-serif !important;
     border-radius: 0px;
     line-height: 20px;
     width: 15px;
@@ -207,29 +210,37 @@ background: #aa6666;
 .taskbarPanel {
     display: inline-block;
     border: 2px solid #000;
-    border-radius: 5px;
+    border-radius: 5px !important;
     line-height: 24px;
-    margin: 2px 0 0 10px;
+    margin: 2px 0 0 5px;
     font-size: 17px;
     padding: 0 10px;
-    font-weight: bold;
+    font-weight: normal;
 	cursor: pointer;
 }
+
+ .startButton {
+  margin: 2px 0 0 0px !important;
+}
+
 .taskbarPanel.activeTab {
 	background: #FFFFFF44;
+  font-weight:bolder;
 }
 .taskbarPanel.minimizedTab {
 	background: #FFFFFF22;
+  font-weight: 90;
 }
 .taskbarPanel.minimizedTab:hover {
 	background: #FFFFFF66;
+  font-weight: bold;
 }
 .taskbarPanel.closed {
 	display: none;
 }
-#taskbar {
+#navbar1 {
 	position: absolute;
-	border-top: 2px solid #000;
+	border-top: 0.5px solid #00000066;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -358,17 +369,18 @@ font-weight: 600;
 
 #textArea {
   width: 100%;
-  height: 100% !important;
+  height: 97% !important;
   font-size: 1em;
   padding: 1em;
   border: 2px inset;
   box-sizing: border-box;
   outline: none;
-  position: relative;
-  bottom: 1px !important;
+  position: absolute;
+  bottom: 20px !important;
   top: 0;
   left: 0;
   right: 0;
+  resize: none;
 }
  
 #noteTitle {
@@ -385,11 +397,13 @@ font-weight: 600;
 
 .notemenu {
 	width: 100%;
-	height: 100%;
+	height: 97%;
 	padding: 2px 0px;
 	position: relative;
+  top: 0px;
 	left: 0;
 	right: 0;
+  bottom: 20px;
 	background-color: #cccccc;
 	border-bottom: 2px inset;
 	border-top: 2px inset;
@@ -398,21 +412,24 @@ font-weight: 600;
 }
 
 .notemenu #saveBtn {
+  position:absolute;
+  right: 0;
 	width: 100%;
-	left: 0;
 	top: 0;
 	background-color: lightgray;
 	text-decoration: none;
 	color: black;
 	border: 2px outset;
+  height: 24px;
 
 }
 
 .notemenu #saveBtn:active {
 	width: 100%;
-	left: 0;
+	right: 0;
 	top: 0;
 	text-decoration: none;
+  border: inset;
 }
 .navbar {
   overflow: hidden;
@@ -422,7 +439,35 @@ z-index: 99999;
   border-radius: 0px 0px 0px 0px;
   position: fixed;
   bottom: 0;
-  padding: 3px 3px;
+  padding: 1px 0 3px 3px;
+}
+
+.hideNavBtn {
+ margin-right: 3px;
+ margin-left: 2px;
+ padding-left: 12px !important;
+ padding-right: 15px !important;
+ border-radius: 0 5px 5px 0 !important;
+}
+
+.barClock {
+  margin-right: 0px;
+  margin-left: 2px;
+  border-radius: 0 0 0 0 !important;
+ }
+ 
+
+.hideOverflowBtn {
+  margin-right: none !important;
+  border-radius: 5px 0 0 5px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+ }
+ 
+.deskHide {
+  position:fixed;
+  top: 5px !important;
+  right: 5px !important;
 }
 
 .navbar a, .navbar button, .ripple, button.showbtn, .taskbar, .taskbarPanel, .navbar input {
@@ -464,11 +509,11 @@ display: flex;
 justify-content: center;
 }
 
-#currentTime {
-  font-size: 200px !important;
+.bgtime #currentTime {
+  font-size: 500px !important;
  opacity: 30%;
   text-align: center !important;
-  font-family: 'Google Sans', 'Roboto', Courier, monospace !important;
+  font-family: 'Product Sans', 'Roboto', Courier, monospace !important;
   font-weight: 1000;
   color: #fff;
   cursor: url(https://lettuce-it.tribe.so/api/v1/posts/5ecf50168c42dd699c00ef95/download/5ecf50168c42dd699c00ef96),auto;
@@ -476,4 +521,54 @@ justify-content: center;
 
 .kiosknews {
   color: #eee;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: url(files/fonts/prodSans/Product-Sans.ttf);
+}
+
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: url(files/fonts/roboto/Roboto-Medium.ttf);
+}
+
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons Sharp';
+  font-style: normal;
+  font-weight: 400;
+  src: url(material.woff2) format('woff2');
+}
+
+.material-icons-sharp {
+  font-family: 'Material Icons Sharp';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.startHeader {
+  font-family: 'Product Sans' !important;
+  font-weight: bolder;
+
+}
+
+.startHeader, .starticons {
+  color: #FFFFFFdd !important;
 }

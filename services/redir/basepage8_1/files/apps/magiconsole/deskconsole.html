@@ -1,0 +1,188 @@
+<meta name="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="jquery.console.js"></script>
+<!-- Everything beyond this point is user-customized -->
+<script type="text/javascript">
+  $(document).ready(function(){
+     /* Second console */
+     var console2 = $('<div class="console2">');
+     $('body').append(console2);
+     var controller2 = console2.console({
+       promptLabel: 'Windo-8-BETA:~$ ',
+       commandValidate:function(line){
+         if (line == "") return false;
+         else return true;
+       },
+       commandHandle:function(line){
+           try { var ret = eval(line);
+                 if (typeof ret != 'undefined') return ret.toString();
+                 else return true; }
+           catch (e) { return e.toString(); }
+       },
+       animateScroll:true,
+       promptHistory:true,
+       welcomeMessage:''
+     });
+     controller2.promptText('help');
+   });
+</script>
+<script>
+   var help = {
+    toString: function() {
+      return "[HELP]: \n magiconsole allows users to debug their javascript/jquery code, and if embed in an application (such as windo 8), allows users to debug the frame's parent. this version of magiconsole is designed to work with windo 8 BETA, so custom commands focused for it's parent frame will be below: \n\n [WINDO 8 BETA BASE COMMANDS] \n WINDOW MANAGEMENT: \n Opening a window  | parent.openWindow(NUMBER)\n Closing a window (is spelled 'windwow')| parent.closeWindwow(NUMBER)\nMinimize a window | parent.minimizeWindow(NUMBER)\n Focus a window | parent.makeWindowActive(NUMBER)\n\n DESKTOP MANAGEMENT \n Hide navigation shelf | parent.hideBar()\n Open App Menu | parent.openNav()\n Close App Menu | parent.closeNav()\n\n[WINDO 8 BETA ADVANCED COMMANDS] \n Reload session | reboot \n Reload magiconsole | reload \n Log out of windo session | logout \n Switch graphics settings | switchgraphx \n\n [MAGICONSOLE SHORTCUTS]\n[CTRL]+[L] | Clear console history\n[CTRL]+[U] | Clear what you're currently inputting...\nMore commands can be seen by typing location.replace.href = \"jquery.console.js\""
+  }
+};
+   var about = {
+     toString: function() {
+        return "[ABOUT]: \n magiconsole - jquery/js console \n by lettuce cobbler twinkie \n based off of https://github.com/chrisdone/jquery-console\n version 1.0 "
+     }
+   };
+   var reload = {
+     toString: function() {
+        location.reload();
+     }
+   };
+   
+   var reboot = {
+     toString: function() {
+        parent.location.reload();
+     }
+   };
+   
+
+   var switchgraphx = {
+     toString: function() {
+        parent.window.location.replace("../../../../switchgraphx.html")
+     }
+   };
+
+   var logout = {
+     toString: function() {
+        parent.window.location.replace("../../../index.html")
+     }
+   };
+
+   </script>
+<style type="text/css" media="screen">
+  div.console2 { word-wrap: break-word; }
+  /* Second console */
+  div.console2 { font-size: 14px; margin-top:none }
+  div.console2 div.jquery-console-inner
+   { width:100%; height:100%; position: absolute; top:0; bottom: 0; left:0; right:0; background: transparent;
+     overflow:auto }
+  div.console2 div.jquery-console-prompt-box
+   { color:#eee; font-family:monospace; }
+  div.console2 div.jquery-console-focus span.jquery-console-cursor
+   { background:#eee; color:#333; font-weight:bold }
+  div.console2 div.jquery-console-message-error
+   { color:#ef0505; font-family:sans-serif; font-weight:bold;
+     padding:0.1em; }
+  div.console2 div.jquery-console-message-success
+   { color:#23c423; font-family:monospace;
+     padding:0.1em; }
+  div.console2 span.jquery-console-prompt-label { font-weight:bold }
+</style>
+<script>
+var cls = true;
+var ops;
+
+window.onload = function() {
+    document.querySelector(".container").addEventListener("mouseenter", function() {
+        cls = false;
+    });
+    document.querySelector(".container").addEventListener("mouseleave", function() {
+        cls = true;
+    });
+    ops = document.querySelectorAll(".container td");
+    for (let i = 0; i < ops.length; i++) {
+        ops[i].addEventListener("click", function() {
+            document.querySelector(".position").style.display = "none";
+        });
+    }
+
+    ops[0].addEventListener("click", function() {
+        setTimeout(function() {
+            /* YOUR FUNCTION */
+
+        }, 50);
+    });
+
+    ops[1].addEventListener("click", function() {
+        setTimeout(function() {
+            /* YOUR FUNCTION */
+
+        }, 50);
+    });
+
+    ops[2].addEventListener("click", function() {
+        setTimeout(function() {
+            /* YOUR FUNCTION */
+
+        }, 50);
+    });
+
+    ops[3].addEventListener("click", function() {
+        setTimeout(function() {
+            /* YOUR FUNCTION */
+
+        }, 50);
+    });
+
+    ops[4].addEventListener("click", function() {
+        setTimeout(function() {
+            /* YOUR FUNCTION */
+
+        }, 50);
+    });
+}
+
+document.addEventListener("contextmenu", function() {
+    var e = window.event;
+    e.preventDefault();
+    document.querySelector(".container").style.padding = "0px";
+
+    var x = e.clientX;
+    var y = e.clientY;
+
+    var docX = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || document.body.offsetWidth;
+    var docY = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || document.body.offsetHeight;
+
+    var border = parseInt(getComputedStyle(document.querySelector(".container"), null).getPropertyValue('border-width'));
+
+    var objX = parseInt(getComputedStyle(document.querySelector(".container"), null).getPropertyValue('width')) + 2;
+    var objY = parseInt(getComputedStyle(document.querySelector(".container"), null).getPropertyValue('height')) + 2;
+
+    if (x + objX > docX) {
+        let diff = (x + objX) - docX;
+        x -= diff + border;
+    }
+
+    if (y + objY > docY) {
+        let diff = (y + objY) - docY;
+        y -= diff + border;
+    }
+
+    document.querySelector(".position").style.display = "block";
+
+    document.querySelector(".position").style.top = y + "px";
+    document.querySelector(".position").style.left = x + "px";
+});
+
+window.addEventListener("resize", function() {
+    document.querySelector(".position").style.display = "none";
+});
+
+document.addEventListener("click", function() {
+    if (cls) {
+        document.querySelector(".position").style.display = "none";
+    }
+});
+
+document.addEventListener("wheel", function() {
+    if (cls) {
+        document.querySelector(".position").style.display = "none";
+        static = false;
+    }
+});
+
+</script>
