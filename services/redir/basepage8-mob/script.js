@@ -87,7 +87,7 @@ $(document).ready(function(){
 		if ($(this).hasClass("closed")) {	$("#minimPanel" + i).addClass('closed');	}		
 		$(this).attr('id', 'window' + (i++));
 		$(this).wrapInner('<div class="wincontent"></div>');
-		$(this).prepend('<div class="windowHeader"><strong><span style="float:right;" onclick="hideBarFull()" title="hide navigation shelf"><strong>\u2800 \u25bd</strong></span>' + $(this).attr("data-title") + '</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Close" class="winclose">&times;</span></div>');
+		$(this).prepend('<div class="windowHeader"<span>\u2800 </span><strong><span style="float:right;border: 0.2px solid #00000022;border-radius: 5px !important;line-height: 24px;margin: -4px 0 0 6px;padding: 0 5px;cursor: pointer;-webkit-box-shadow: 5px 3px 13px 0px rgba(0, 0, 0, 0.151);box-shadow: 5px 3px 13px 0px rgba(0, 0, 0, 0.151);" onclick="hideBarFull()" title="hide navigation shelf"><strong>\u25bd</strong></span>' + $(this).attr("data-title") + '</strong><span title="Minimize" class="winminimize"><span></span></span><span title="Close" class="winclose">&times;</span></div>');
 	});
 	
 	$("#minimPanel" + (i-1)).addClass('activeTab');

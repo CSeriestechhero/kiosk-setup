@@ -208,6 +208,8 @@ function closeNav() {
         };
  </script>
 	<title>Kiosk Home</title>
+</head>
+  <body>
 	<div id="desktop">
 	  <meta http-equiv="Cache-control" content="no-cache">
 <style>
@@ -220,8 +222,8 @@ top:0;
 		color: #fff;
 	}
 </style>
-  </head>
-<body>
+
+
 <div class="kiosknews">
 <marquee style="position: fixed; top: 40%;" behavior="scroll" direction="left" scrollamount="3">
 	<mark>
@@ -385,13 +387,13 @@ function myFunction() {
 </div>
 
 		<div class="window closed app" data-title="Web Search">
-			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/apps/websearch.html"></iframe>
+			<iframe class="cefApp" style="width: 100%; margin: 0px; border: none;" src="files/apps/websearch.html"></iframe>
 		</div>
 		<div class="window closed app" data-title="LCTapps Labyrinth">
-			<iframe style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/redidmaze/software/maze3d-launch.html"></iframe>
+			<iframe class="cefApp" style="height: 100%; width: 100%; margin: 0px; border: none;" src="files/redidmaze/software/maze3d-launch.html"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Browser">
-			<iframe style="height: 100%; width: 100%; margin: 0px; border: none; left: 0;" src="files/apps/browserlite.html"></iframe>
+			<iframe class="cefApp" style="height: 100%; width: 100%; margin: 0px; border: none; left: 0;" src="files/apps/browserlite.html"></iframe>
 		</div>
 		<div id="bgchanger" class="window closed" data-title="Options">
 			<h1 class="settingui" >Options</h1><br>
@@ -406,18 +408,18 @@ function myFunction() {
     }
 </script><input class="settingui" style="width: 70%;" type="text" id="bgchanger" placeholder="Change Background Add URL" />
 <input class="settingui" type="button" onclick="changebackground();" value="Change!" /><br><br>
-		<div><button class="settingui" onclick="myFunction()">Toggle dark mode</button>
+		<div>
+      <button class="settingui" onclick="myFunction()">Toggle dark mode</button>
       <button class="settingui" style="float: right !important;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>Hide Navigation Bar</strong></button><br>
       <button style="cursor: pointer;" class="openWindow settingui" data-id="12">Credits</button><button style="float: right !important;font-size: 14px;" class="openWindow settingui" data-id="16" title="lctcmd"><strong>LCTcmd</strong></button>
     </div>
-
-		
 		</div>
 		<div class="window" data-title="Welcome to Kiosk Home">
 			<div style="padding: 10px;position:absolute; top:0; bottom:0; left:0; right:0; overflow-y: scroll;"><h1>Windo 8 Updates & Announcements</h1>
 			<p>
         UPDATE 08/08/24:
         This is the first time in 2 years since Windo 8 has been updated. Fixes and changes include:<br>
+        - Fixed the window maximization cutoff issue (I THINK.... I need to test on various screen sizes)<br>
         - Changing Fonts and UI colors to bring about a slightly more appealing user interface.<br>
         - Adding a Taskbar clock (so you do not have declutter your desktop to wait ~30s to see what the time is)<br>
         - You can hide taskbar app name clutter, if you have multiple apps open and the taskbar grows to take up space, click the square button on the left of the time to hide currently open apps on the taskbar.<br>
@@ -451,13 +453,13 @@ form.addEventListener('submit', handleForm);
 </script>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Contact LCTapps">
-   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSvCRie2uxs17LDmNbISX7BT0PpPFAc6BsgKxWP6JwsI-PEA/viewform?embedded=true" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="https://docs.google.com/forms/d/e/1FAIpQLSeSvCRie2uxs17LDmNbISX7BT0PpPFAc6BsgKxWP6JwsI-PEA/viewform?embedded=true" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Kiosk Survey">
-   <iframe src="https://cseriestechhero.github.io/kiosk-setup/services/redir/override-12-09-21" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="https://cseriestechhero.github.io/kiosk-setup/services/redir/override-12-09-21" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Ice Dodo">
-   <iframe src="files/apps/icedodo/icedodo-launch.html" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="files/apps/icedodo/icedodo-launch.html" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="CONFIRMATION DIALOG">
    <div style="padding: 10px;"><h1>WARNING!</h1><p style="display:flex;justify-content:center;">    YOU UNDERSTAND THE CONSEQUENCES OF LAUNCHING THIS SCRIPT WHICH WILL LEAVE YOUR COMPUTER IN A [temporarily] UNUSABLE STATE?<br>Compucidal Scripto will open several empty popups endlessly until your system freezes. To attempt to stop this, try force-killing Kiosk Home via a task manager or if Kiosk Home is in Kiosk, try [CTRL]+[SHIFT]+[W] or [ALT]+[SEARCH]+[FULLSCREEN]. IF ALL FAILS, TRY [RELOAD]+[POWER]</p><br><style>
@@ -489,31 +491,31 @@ border: 1px solid #000;
 </style><center><button class="warn" onclick="compucidalScripto()">CONTINUE</button><br><button class="warn" onclick="closeWindwow(11)">NEVERMIND</button></center></div>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Credits">
-   <iframe src="files/apps/credits/creditsIndex.html" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="files/apps/credits/creditsIndex.html" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 				<div style="padding:none !important;" class="window closed app" data-title="Shortcut nest">
-   <iframe src="files/apps/tree.html" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="files/apps/tree.html" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Tunnel Glider">
-   <iframe src="files/apps/tungli/tungli-launch.html" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="files/apps/tungli/tungli-launch.html" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Socialselect">
-   <iframe src="files/apps/socialselect.html" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="files/apps/socialselect.html" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="LCTcmd">
-   <iframe src="files/apps/lctcmd/cmd/prompt.html" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="files/apps/lctcmd/cmd/prompt.html" width="100%" height="100%" style="border: none;"></iframe>
    </div>
 		<div style="padding:none !important;" class="window closed app" data-title="HexGL">
-   <iframe src="files/apps/hxgl/hexgl-launch.html" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="files/apps/hxgl/hexgl-launch.html" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
     <div style="padding:none !important;" class="window closed app" data-title="Uh oh...">
    <div style="padding: 10px;"><h1>WARNING!</h1><p style="display:flex;justify-content:center;">    It apparently seems that you've been banned from Kiosk's services. Most features of Kiosk Home will NOT work!</p><br>
 	   <center><button class="warn" onclick="window.open('mailto:lcteatsoatmeal@gmail.com')">Contact Lettuce Cobbler Twinkie</button><br><button class="warn" onclick="closeWindwow(18)">Got it</button></center></div></div>
 	   		<div style="padding:none !important;" class="window closed app" data-title="magiconsole">
-   <iframe src="files/apps/magiconsole/index.html" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="files/apps/magiconsole/index.html" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 		<div style="padding:none !important;" class="window closed app" data-title="Documentation">
-   <iframe src="files/apps/docs/docpage1.html" width="100%" height="100%" style="border: none;"></iframe>
+   <iframe class="cefApp" src="files/apps/docs/docpage1.html" width="100%" height="100%" style="border: none;"></iframe>
 		</div>
 </div>
 		<div id="navbar1" class="navbar">

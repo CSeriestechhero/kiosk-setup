@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  </head>
 <body onload="adjustFullScreenSize(*); hideBar()">
 <style>
 .sidenav {
@@ -212,6 +211,8 @@ function closeNav() {
         };
  </script>
 	<title>Kiosk Home</title>
+</head>
+<body>
 	<div id="desktop">
 	  <meta http-equiv="Cache-control" content="no-cache">
 <style>
@@ -227,7 +228,7 @@ top:0;
 <div class="kiosknews">
 <marquee style="position: fixed; top: 40%;" behavior="scroll" direction="left" scrollamount="3">
 	<mark>
-		<h1 style="font-size:20px; z-index:9999 !important;" id="currentTime"></h1><mark>
+		<h1 style="font-size:200px; opacity:20%; z-index:9999 !important;" class="bgTime" id="currentTime"></h1><mark>
 </marquee>
 <marquee style="position: fixed; top: 40%;" behavior="scroll" direction="right" scrollamount="2">
 	<mark>
@@ -257,13 +258,14 @@ top:0;
       mid = 'am';
     }
     document.getElementById('currentTime').innerHTML = hour + ':' + min + ' ' + mid;
+    document.getElementById('currentTimeTwo').innerHTML = hour + ':' + min + ' ' + mid;
     setTimeout(clock, 1000);
   }
 }
 
 
 </script></div>
-	  <button style="float: right;font-size: 14px;" onclick="hideBarFull()" title="hide navigation shelf"><strong>▽</strong></button>
+	  <button class="taskbarPanel deskHide" style="float: right;font-size: 14px;" onclick="hideBarFull()" title="hide navigation shelf"><strong>▽</strong></button>
 	  		    <div style="" id="urlbar">
 	  <form id="omni" POST="">
     <input placeholder="Type in a URL with http:// or https://" value="https://" type="text" id="field" autofocus/>
@@ -380,6 +382,10 @@ function myFunction() {
                     <td style="vertical-align: middle; text-align: center;" class="openWindow" data-id="19"><a>magiconsole</a><br>
                     </td>
                 </tr>
+                <tr>
+                  <td style="vertical-align: middle; text-align: center;" class="openWindow" data-id="20"><a>Documentation</a><br>
+                  </td>
+              </tr>
             </tbody>
         </table>
     </div>
@@ -406,15 +412,16 @@ function myFunction() {
       localStorage.setItem('back',url);
     }
 </script><input class="settingui" style="width: 70%;" type="text" id="bgchanger" placeholder="Change Background Add URL" />
-<input class="settingui" type="button" onclick="changebackground();" value="Change!" /><br><span style="text-align: center;">---</span>
-		<div><button onclick="myFunction()">Toggle dark mode</button></div>
-		<span style="text-align: center;">---</span>
-		<button style="float: right !important;font-size: 14px;" onclick="hideBarFull()" title="hide navigation shelf"><strong>Hide Navigation Bar</strong></button><br>
-		    <button style="cursor: pointer;" class="openWindow" data-id="12">Credits</button><br><button style="float: right !important;font-size: 14px;" class="openWindow" data-id="16" title="lctcmd"><strong>LCTcmd</strong></button>
+<input class="settingui" type="button" onclick="changebackground();" value="Change!" /><br>
+		<div>
+      <button class="settingui" onclick="myFunction()">Toggle dark mode</button>
+      <button class="settingui" style="float: right !important;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>Hide Navigation Bar</strong></button><br>
+      <button style="cursor: pointer;" class="openWindow settingui" data-id="12">Credits</button><button style="float: right !important;font-size: 14px;" class="openWindow settingui" data-id="16" title="lctcmd"><strong>LCTcmd</strong></button>
 		</div>
+  </div>
 		<div class="window fullSizeWindow" data-title="Welcome to Kiosk Home">
-			<div style="padding: 10px;"><h1>How to Operate?</h1>
-			<p>This version of Windo 7/8 is designed for touch-screen devices, such as smartphones, tablets, or touch-compatible laptops. <br> To navigate the interface. Press the K+ button to see a list of all available apps. <br>By default, any open and running apps are listed next to the K+ button on the taskbar.<br> Press Active to reduce the running apps clutter.<br> To hide the bar fully, press the ▽ button at the window titlebar. <br>Close 0and minimize are quite self explanatory.<br><br>- If you want to go back to the desktop interface, click <a href="../">here (just click BACK on the first thing!)</a></p>
+			<div style="padding: 10px;position:absolute; top:0; bottom:0; left:0; right:0; overflow-y: scroll;"><h1>How to Operate?</h1>
+			<p>This version of Windo 7/8 is designed for touch-screen devices, such as smartphones, tablets, or touch-compatible laptops. <br> To navigate the interface. Press the K+ button to see a list of all available apps. <br>By default, any open and running apps are listed next to the K+ button on the taskbar.<br> Press ▣ to reduce the running apps clutter.<br> To hide the bar fully, press the ▽ button at the window titlebar. <br>Close and minimize are quite self explanatory.</p><br><h3>UPDATES 08/09/24</h3><br><code>- Fixed UI inconsistencies<br>- Added Documentation window <br>more fixes coming soon...</code><br><br><p>- If you want to go back to the desktop interface, click <a href="../">here (just click BACK on the first thing!)</a></p>
 			<hr />
 			<p><strong>This webtop's ui uses HTML5-Template's Desktop Template. You can check it out at <a href="https://html5-templates.com/" rel="nofollow" target="_blank">HTML5-Templates.com</a>	</strong></p><br></div>
 
@@ -430,7 +437,7 @@ m.source('files/uploads/hypp3rr x ace of spadez - 13013013 𓆉 {p. sujo} ༼ �
 				<script src="notepadDev.js"></script>
 <form id="noteApp" class="notemenu" onsubmit="download(this['name'].value, this['text'].value)">
   <input type="text" id="noteTitle" name="name" value="Untitled.txt"><input style="width: 50px;" id="saveBtn" type="submit" value="Save">
-  <textarea  id="textArea" name="text">This notepad does not autosave, make sure to hit the save button so you can download your note to your device! Additionally, saving restarts Windo 8 so make sure everything else is closed and ready...
+  <textarea style="position:absolute; top:24px; bottom:0; left:0; right:0;overflow-y: auto;" id="textArea" name="text">This notepad does not autosave, make sure to hit the save button so you can download your note to your device! Additionally, saving restarts Windo 8 so make sure everything else is closed and ready...
   You can clear this text when you're ready to start writing.</textarea>
 
 </form>
@@ -502,37 +509,43 @@ border: 1px solid #000;
 	   		<div style="padding:none !important;" class="window closed app fullSizeWindow" data-title="magiconsole">
    <iframe src="files/apps/magiconsole/index.html" width="100%" height="95%" style="border: none;"></iframe>
 		</div>
+    <div style="padding:none !important;" class="window closed app fullSizeWindow" data-title="Documentation">
+      <iframe class="cefApp" src="files/apps/docs/docpage1.html" width="100%" height="100%" style="border: none;"></iframe>
+       </div>
 </div>
 		<div id="navbar1" class="navbar">
-		  <button style="cursor:pointer" onclick="openNav()">K+</button>
+		  <button class="taskbarPanel startButton" style="cursor:pointer;" onclick="openNav()">K+</button>
 		  <div id="taskbar"></div>
-		  <button style="float: right;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>Active</strong></button>
+		  <button class="taskbarPanel hideOverflowBtn" style="float: right;font-size: 14px;" onclick="hideBar()" title="hide navigation shelf"><strong>▣</strong></button>
+      <span class="taskbarPanel barClock" style="font-family:'Roboto'; font-size: 14px; !important; float:right;" id="currentTimeTwo"></span>
 		</div>
 	
 			<div id="mySidenav" class="sidenav">
 			  		    <a style="float: left; font-family: 'Material Icons Sharp';cursor: pointer;" class="logoutbtn" onclick="window.location.replace('index.html')" title="Log out"><strong>logout</strong></a>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <h1>Apps</h1>
-  			<a style="cursor: pointer;" class="openWindow" data-id="0">LCTapps Search app</a><br>
-			<a style="cursor: pointer;" class="openWindow" data-id="1">LCTapps Labyrinth</a><br>
-			<a style="cursor: pointer;" class="openWindow" data-id="2">Browser</a><br>
-			<a style="cursor: pointer;" class="openWindow" data-id="3">os options</a><br>
-			<a style="cursor: pointer;" class="openWindow" data-id="4">Welcome screen</a><br>
-			<a style="cursor: pointer;" class="openWindow" data-id="5">Kiosk URL Loader</a><br>
-			<a style="cursor: pointer;" class="openWindow" data-id="6">song test</a><br>
-			<a style="cursor: pointer;" class="openWindow" data-id="7">Notepad</a><br>
-			<a style="cursor: pointer;" class="openWindow" data-id="8">Contact LCTapps</a><br>
-<button style="cursor: pointer;" type="button" onclick="gAccountAdd()">Add Google Account to Kiosk</button>
-<button style="cursor: pointer;" type="button" onclick="spawnHolyUnblocker()">Spawn IN Tab</button>
-  <a style="cursor: pointer;" class="openWindow" data-id="9">Kiosk Survey</a><br>
-  <button style="cursor: pointer;" type="button" onclick="robloxNowgg()">Roblox</button>
-  <a style="cursor: pointer;" class="openWindow" data-id="10">Ice Dodo</a><br>
-    <a style="cursor: pointer;" class="openWindow" data-id="11"><strong><i>COMPUCIDAL SCRIPTO</i></strong></a><br>
-    <a style="cursor: pointer;" class="openWindow" data-id="13">Shortcut Nest</a><br>
-    <a style="cursor: pointer;" class="openWindow" data-id="14">Tunnel Glider</a><br>
-<a style="cursor: pointer;" class="openWindow" data-id="15">1998 IM</a><br>
-<a style="cursor: pointer;" class="openWindow" data-id="17">HexGL</a><br>
-<a style="cursor: pointer;" class="openWindow" data-id="19">magiconsole</a><br><br><br>
+  <h1 style="font-family: 'Product Sans';">Apps</h1>
+  			<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="0">LCTapps Search app</a><br>
+			<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="1">LCTapps Labyrinth</a><br>
+			<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="2">Browser</a><br>
+			<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="3">os options</a><br>
+			<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="4">Welcome screen</a><br>
+			<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="5">Kiosk URL Loader</a><br>
+			<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="6">song test</a><br>
+			<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="7">Notepad</a><br>
+			<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="8">Contact LCTapps</a><br>
+<button style="cursor: pointer; font-family: Roboto;" type="button" onclick="closeNav()" onclick="gAccountAdd()">Add Google Account to Kiosk</button>
+<button style="cursor: pointer; font-family: Roboto;" type="button" onclick="spawnHolyUnblocker();closeNav()">Spawn IN Tab</button>
+  <a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="9">Kiosk Survey</a><br>
+  <button style="cursor: pointer; font-family: Roboto;" type="button" onclick="robloxNowgg();closeMav()">Roblox</button>
+  <a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="10">Ice Dodo</a><br>
+    <a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="11"><strong><i>COMPUCIDAL SCRIPTO</i></strong></a><br>
+    <a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="13">Shortcut Nest</a><br>
+    <a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="14">Tunnel Glider</a><br>
+<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="15">1998 IM</a><br>
+<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="17">HexGL</a><br>
+<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="19">magiconsole</a><br>
+<a style="cursor: pointer; font-family: Roboto;" class="openWindow" onclick="closeNav()" data-id="20">Documentation</a><br>
+<br><br><br><br><br>
 <script>
 function gAccountAdd() {
   window.open("https://accounts.google.com/accountchooser");
