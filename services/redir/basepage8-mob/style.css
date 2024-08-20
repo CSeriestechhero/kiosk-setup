@@ -428,7 +428,6 @@ font-weight: 600;
 
 .notemenu #saveBtn:active {
 	width: 100%;
-	right: 0;
 	top: 0;
 	text-decoration: none;
   border: inset;
